@@ -14,8 +14,6 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "files": [
-    "bin",
-    "lib",
     "dist",
     "LICENSE",
     "types"
@@ -28,7 +26,7 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
-    "build": "tsc",
+    "build": "tsc && yarn copy-files",
     "test": "jest",
     "predocs": "rm -rf docs/",
     "docs": "esdoc -c .esdoc.json",
@@ -39,7 +37,8 @@
     "prettier-write": "yarn prettier -- --parser typescript --no-semi --trailing-comma all --write --print-width 120",
     "prettier-project": "yarn prettier-write -- 'lib/**/*.{ts,tsx}'",
     "lint": "eslint \"lib/**/*.ts\"",
-    "local": "sudo npm i -g && elements-design-tokens"
+    "local": "sudo npm i -g && elements-design-tokens",
+    "copy-files": "copyfiles -u 1 src/**/*.ejs dist/"
   },
   "license": "MIT",
   "engines": {
@@ -60,6 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "commitizen": "^4.2.4",
+    "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^8.17.0",
     "husky": "^8.0.1",
