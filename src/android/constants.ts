@@ -2,7 +2,7 @@ import { join } from 'path'
 
 export const TEMPLATES = {
   typography: {
-    source: join(__dirname, './templates/android/typographies.ejs'),
+    source: join(__dirname, './templates/typographies.ejs'),
     destination: join(
       __dirname,
       '../shared/presentation/src/main/java/nl/elements/skeleton/presentation/compose/theme/Type.kt',
@@ -11,7 +11,7 @@ export const TEMPLATES = {
     formatter: 'android/compose/typography',
   },
   spacings: {
-    source: join(__dirname, './templates/android/spacings.ejs'),
+    source: join(__dirname, './templates/spacings.ejs'),
     destination: join(
       __dirname,
       '../shared/presentation/src/main/java/nl/elements/skeleton/presentation/compose/theme/Spacings.kt',
@@ -20,10 +20,10 @@ export const TEMPLATES = {
     formatter: 'android/spacings',
   },
   colors: (destination: string) => ({
-    source: join(__dirname, './templates/android/colors.ejs'),
+    source: join(__dirname, './templates/colors.ejs'),
     destination: `${destination}/Colors.kt`,
     filter: 'color',
     formatter: 'android/compose/colors',
   }),
-  header: join(__dirname, './templates/android/header.ejs'),
+  header: join(__dirname, './templates/header.ejs'),
 }
