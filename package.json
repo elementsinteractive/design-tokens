@@ -1,11 +1,11 @@
 {
   "name": "@elements/design-tokens",
   "description": "Shared Design Tokens set-up Elements projects",
-  "author": {
-    "name": "Jeffrey de Looff",
-    "email": "jeffrey.delooff@elements.nl"
+  "author": "Elements",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elementsinteractive/design-tokens.git"
   },
-  "repository": "https://github.com/elementsinteractive/design-tokens.git",
   "keywords": [
     "design",
     "tokens",
@@ -13,7 +13,12 @@
   ],
   "version": "0.0.1",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "bin",
+    "dist",
+    "LICENSE",
+    "types"
+  ],
   "types": "dist/index.d.ts",
   "bin": {
     "elements-transform-design-tokens": "dist/index.js"
