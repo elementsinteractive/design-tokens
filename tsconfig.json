@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "rootDir": "src",
+    "rootDir": "lib",
     "outDir": "dist",
     "allowJs": false,
     "pretty": true,
@@ -13,6 +13,6 @@
     "moduleResolution": "node"
   },
   "lib": ["es6"],
-  "include": ["src/**/**.ts"],
+  "include": ["lib/**/**.ts", "bin/index.ts"],
   "exclude": ["node_modules", "dist"]
 }

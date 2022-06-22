@@ -21,7 +21,7 @@
   ],
   "types": "dist/index.d.ts",
   "bin": {
-    "elements-transform-design-tokens": "dist/index.js"
+    "elements-transform-design-tokens": "bin/design-tokens"
   },
   "type": "module",
   "scripts": {
@@ -37,8 +37,8 @@
     "semantic-release": "semantic-release pre && npm run publish && semantic-release post",
     "prettier": "prettier",
     "prettier-write": "yarn prettier -- --parser typescript --no-semi --trailing-comma all --write --print-width 120",
-    "prettier-project": "yarn prettier-write -- 'src/**/*.{ts,tsx}'",
-    "lint": "eslint \"src/**/*.ts\""
+    "prettier-project": "yarn prettier-write -- 'lib/**/*.{ts,tsx}'",
+    "lint": "eslint \"lib/**/*.ts\""
   },
   "license": "MIT",
   "engines": {
