@@ -3,7 +3,6 @@
 import yargs from 'yargs/yargs'
 import { hideBin } from 'yargs/helpers'
 
-import { LOG_PREFIX } from './constants'
 import { setup as setupAndroid } from './android'
 
 /**

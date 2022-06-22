@@ -15,8 +15,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "@elements/design-tokens": "dist/index.js"
+    "elements-transform-design-tokens": "dist/index.js"
   },
+  "type": "module",
   "scripts": {
     "precommit": "lint-staged",
     "commit": "git-cz",
