@@ -31,8 +31,6 @@ yargs(hideBin(process.argv))
           describe: 'Destination folder to write the files to',
         }),
     handler: argv => {
-      console.log('Got', argv)
-
       setupAndroid({
         input: argv.input,
         packageName: argv.package,

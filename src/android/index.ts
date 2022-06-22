@@ -101,7 +101,7 @@ export const setup = (config: AndroidConfig) => {
   // registerFilter(TEMPLATES.spacings.filter, 'spacing')
   registerFilter(colorsTemplate.filter, 'color')
 
-  return StyleDictionaryPackage.extend({
+  const StyleDictionary = StyleDictionaryPackage.extend({
     source: [input],
     platforms: {
       android: {
@@ -126,5 +126,5 @@ export const setup = (config: AndroidConfig) => {
     },
   })
 
-  StyleDictionaryPackage.buildPlatform('android')
+  StyleDictionary.buildPlatform('android')
 }
