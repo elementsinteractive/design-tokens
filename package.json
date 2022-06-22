@@ -26,6 +26,7 @@
     "test": "jest",
     "predocs": "rm -rf docs/",
     "docs": "esdoc -c .esdoc.json",
+    "prepack": "npm run build",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release pre && npm run publish && semantic-release post",
     "prettier": "prettier",
