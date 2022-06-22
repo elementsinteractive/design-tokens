@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const yargs = require('yargs/yargs')
+import yargs from 'yargs/yargs'
 
-const { hideBin } = require('yargs/helpers')
+import { hideBin } from 'yargs/helpers'
 
-const { setup: setupAndroid } = require('../lib/android')
+import { setup as setupAndroid } from './android'
 
 /**
  * CLI arguments

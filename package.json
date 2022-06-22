@@ -22,7 +22,7 @@
   ],
   "types": "dist/index.d.ts",
   "bin": {
-    "elements-transform-design-tokens": "bin/design-tokens"
+    "elements-design-tokens": "./dist/index.js"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -38,7 +38,8 @@
     "prettier": "prettier",
     "prettier-write": "yarn prettier -- --parser typescript --no-semi --trailing-comma all --write --print-width 120",
     "prettier-project": "yarn prettier-write -- 'lib/**/*.{ts,tsx}'",
-    "lint": "eslint \"lib/**/*.ts\""
+    "lint": "eslint \"lib/**/*.ts\"",
+    "local": "sudo npm i -g && elements-design-tokens"
   },
   "license": "MIT",
   "engines": {
