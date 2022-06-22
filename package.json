@@ -23,7 +23,6 @@
   "bin": {
     "elements-transform-design-tokens": "bin/design-tokens"
   },
-  "type": "module",
   "scripts": {
     "precommit": "lint-staged",
     "commit": "git-cz",
