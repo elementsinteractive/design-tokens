@@ -1,0 +1,9 @@
+package <%=packageName %>
+
+<%= header %>
+
+object Spacings {
+  <%_ for (const { name, value } of spacings) { _%>
+  const val <%= name %> = <%= value %>
+  <%_ } _%>
+}

@@ -1,0 +1,11 @@
+package <%=packageName %>
+
+<%= header %>
+import androidx.compose.ui.graphics.Color
+import com.airbnb.android.showkase.annotation.ShowkaseColor
+
+<%_ for (const { name, value } of colors) { _%>
+@ShowkaseColor(name = "<%= name %>", group = "material")
+val <%= name %> = Color(0x<%= value %>)
+
+<%_ } _%>
