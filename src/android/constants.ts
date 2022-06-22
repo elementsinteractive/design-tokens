@@ -1,29 +1,23 @@
 import { join } from 'path'
 
-export const TEMPLATES = {
-  typography: {
+export const TEMPLATES = (destination: string) => ({
+  typographyTemplate: {
     source: join(__dirname, './templates/typographies.ejs'),
-    destination: join(
-      __dirname,
-      '../shared/presentation/src/main/java/nl/elements/skeleton/presentation/compose/theme/Type.kt',
-    ),
+    destination,
     filter: 'isTypography',
     formatter: 'android/compose/typography',
   },
-  spacings: {
+  spacingsTemplate: {
     source: join(__dirname, './templates/spacings.ejs'),
-    destination: join(
-      __dirname,
-      '../shared/presentation/src/main/java/nl/elements/skeleton/presentation/compose/theme/Spacings.kt',
-    ),
+    destination,
     filter: 'isSpacing',
     formatter: 'android/spacings',
   },
-  colors: (destination: string) => ({
+  colorsTemplate: {
     source: join(__dirname, './templates/colors.ejs'),
-    destination: `${destination}/Colors.kt`,
+    destination: `${destination}/Color.kt`,
     filter: 'color',
     formatter: 'android/compose/colors',
-  }),
-  header: join(__dirname, './templates/header.ejs'),
-}
+  },
+  headerTemplate: join(__dirname, './templates/header.ejs'),
+})

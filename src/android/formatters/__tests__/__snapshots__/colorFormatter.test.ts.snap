@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorFormatter can handle dictionary with color tokens 1`] = `
+"package nl.elements.skeleton
+
+/Users/jeffrey.delooff/Documents/git/design-tokens/src/android/templates/header.ejs
+import androidx.compose.ui.graphics.Color
+import com.airbnb.android.showkase.annotation.ShowkaseColor
+
+@ShowkaseColor(name = \\"primary\\", group = \\"material\\")
+val primary = Color(0xffffffff)
+
+@ShowkaseColor(name = \\"background\\", group = \\"material\\")
+val background = Color(0xfff4f4f4)
+
+@ShowkaseColor(name = \\"primaryVariant\\", group = \\"material\\")
+val primaryVariant = Color(0xff000000)
+
+@ShowkaseColor(name = \\"secondary\\", group = \\"material\\")
+val secondary = Color(0xffff495b)
+
+"
+`;
