@@ -6,6 +6,8 @@ import Color from 'tinycolor2'
 import { AndroidConfig } from '../design.types'
 
 export const setup = (config: AndroidConfig) => {
+  console.log('Setting up Android', config);
+
   const { input, packageName, destination } = config
 
   const header = createTemplate(TEMPLATES.header)
@@ -123,4 +125,6 @@ export const setup = (config: AndroidConfig) => {
       },
     },
   })
+
+  StyleDictionaryPackage.buildPlatform('android')
 }
