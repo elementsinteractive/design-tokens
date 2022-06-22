@@ -3,7 +3,7 @@
 exports[`spacingFormatter can handle dictionary with spacing tokens 1`] = `
 "package nl.elements.skeleton
 
-/Users/jeffrey.delooff/Documents/git/design-tokens/src/android/templates/header.ejs
+/* Test header */
 
 object Spacings {
   const val xxxs = 4

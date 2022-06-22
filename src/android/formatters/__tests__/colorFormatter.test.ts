@@ -4,14 +4,15 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { colorFormatter } from '../colorFormatter'
 import { FormatterConfig } from '../types'
+import { HEADER } from './constants'
 
 describe('colorFormatter', () => {
   it('can handle dictionary with color tokens', () => {
-    const { headerTemplate, colorsTemplate } = TEMPLATES('')
+    const { colorsTemplate } = TEMPLATES('')
 
     const colorConfig: FormatterConfig = {
       template: colorsTemplate.source,
-      header: headerTemplate,
+      header: HEADER,
       packageName: 'nl.elements.skeleton',
     }
 

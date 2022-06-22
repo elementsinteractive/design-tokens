@@ -3,7 +3,7 @@
 exports[`typographyFormatter can handle dictionary with typography tokens 1`] = `
 "package nl.elements.skeleton
 
-/Users/jeffrey.delooff/Documents/git/design-tokens/src/android/templates/header.ejs
+/* Test header */
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight

@@ -4,14 +4,15 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { FormatterConfig } from '../types'
 import { spacingFormatter } from '../spacingFormatter'
+import { HEADER } from './constants'
 
 describe('spacingFormatter', () => {
   it('can handle dictionary with spacing tokens', () => {
-    const { headerTemplate, spacingsTemplate } = TEMPLATES('')
+    const { spacingsTemplate } = TEMPLATES('')
 
     const spacingConfig: FormatterConfig = {
       template: spacingsTemplate.source,
-      header: headerTemplate,
+      header: HEADER,
       packageName: 'nl.elements.skeleton',
     }
 
