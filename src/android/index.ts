@@ -65,8 +65,8 @@ export const setup = (config: AndroidConfig) => {
     })
   }
 
-  // registerFilter(TEMPLATES.typography.filter, 'typography')
-  // registerFilter(spacingsTemplate.filter, 'spacing')
+  registerFilter(typographyTemplate.filter, 'typography')
+  registerFilter(spacingsTemplate.filter, 'spacing')
   registerFilter(colorsTemplate.filter, 'color')
 
   const StyleDictionary = StyleDictionaryPackage.extend({
@@ -74,16 +74,16 @@ export const setup = (config: AndroidConfig) => {
     platforms: {
       android: {
         files: [
-          // {
-          //   format: TEMPLATES.typography.formatter,
-          //   destination: TEMPLATES.typography.destination,
-          //   filter: TEMPLATES.typography.filter,
-          // },
-          // {
-          //   format: spacingsTemplate.formatter,
-          //   destination: spacingsTemplate.destination,
-          //   filter: spacingsTemplate.filter,
-          // },
+          {
+            format: typographyTemplate.formatter,
+            destination: typographyTemplate.destination,
+            filter: typographyTemplate.filter,
+          },
+          {
+            format: spacingsTemplate.formatter,
+            destination: spacingsTemplate.destination,
+            filter: spacingsTemplate.filter,
+          },
           {
             format: colorsTemplate.formatter,
             destination: colorsTemplate.destination,
@@ -93,6 +93,8 @@ export const setup = (config: AndroidConfig) => {
       },
     },
   })
+
+  console.log('Building for platform Android')
 
   StyleDictionary.buildPlatform('android')
 }
