@@ -8,8 +8,6 @@ export const typographyFormatter: (config: FormatterConfig) => Formatter =
   ({ dictionary }) => {
     const { template, header, packageName } = config
 
-    console.log(dictionary)
-
     const mapFontWeight = weight => {
       const mapping = {
         Regular: 'Normal',
@@ -25,8 +23,6 @@ export const typographyFormatter: (config: FormatterConfig) => Formatter =
       ...tokens[token].value,
       fontWeight: mapFontWeight(tokens[token].value.fontWeight),
     }))
-
-    console.log(typographies)
 
     return useTemplate(template)({
       typographies,

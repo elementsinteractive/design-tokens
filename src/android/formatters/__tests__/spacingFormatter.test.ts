@@ -6,7 +6,7 @@ import { FormatterConfig } from '../types'
 import { spacingFormatter } from '../spacingFormatter'
 
 describe('spacingFormatter', () => {
-  xit('can handle dictionary with spacing tokens', () => {
+  it('can handle dictionary with spacing tokens', () => {
     const { headerTemplate, spacingsTemplate } = TEMPLATES('')
 
     const spacingConfig: FormatterConfig = {

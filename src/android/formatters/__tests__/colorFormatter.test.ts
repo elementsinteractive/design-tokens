@@ -6,7 +6,7 @@ import { colorFormatter } from '../colorFormatter'
 import { FormatterConfig } from '../types'
 
 describe('colorFormatter', () => {
-  xit('can handle dictionary with color tokens', () => {
+  it('can handle dictionary with color tokens', () => {
     const { headerTemplate, colorsTemplate } = TEMPLATES('')
 
     const colorConfig: FormatterConfig = {
