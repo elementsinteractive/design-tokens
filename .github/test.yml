@@ -12,8 +12,8 @@ jobs:
         with:
           node-version: 18.x
           cache: yarn
-      - name: Test build
-        working-directory: documentation
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run tests
+        run: yarn test
