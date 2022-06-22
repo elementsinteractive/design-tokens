@@ -13,6 +13,7 @@
   ],
   "version": "0.0.1",
   "main": "dist/index.js",
+  "files": ["dist"],
   "types": "dist/index.d.ts",
   "bin": {
     "elements-transform-design-tokens": "dist/index.js"
