@@ -56,7 +56,7 @@
     "@octokit/plugin-paginate-rest": "^2.17.0",
     "@octokit/rest": "^18.12.0",
     "@types/jest": "^27.5.1",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.27.1",
     "commitizen": "^4.2.4",
     "copyfiles": "^2.4.1",
