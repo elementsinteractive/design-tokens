@@ -22,6 +22,7 @@ elements-design-tokens <platform>
 | --------- | ---------- | ----------------------- |
 | --help    | -h         | Display help content    |
 | --version | -v         | Display current version |
+| platform  |            | Values: android         |
 
 ### Android
 
@@ -29,8 +30,8 @@ elements-design-tokens <platform>
 elements-design-tokens android
 ```
 
-| Flag              | Short Flag | Description                       |
-| ----------------- | ---------- | --------------------------------- |
-| --input \[input\] | -i         | JSON file with design tokens      |
-| --package         | -p         | Kotlin package name               |
-| --destination     | -d         | Where to write the generated code |
+| Flag                          | Short Flag | Description                       |
+| ----------------------------- | ---------- | --------------------------------- |
+| --input \[input\]             | -i         | JSON file with design tokens      |
+| --package \[package\]         | -p         | Kotlin package name               |
+| --destination \[destination\] | -d         | Where to write the generated code |
