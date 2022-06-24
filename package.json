@@ -68,7 +68,7 @@
     "lodash": "^4.17.21",
     "prettier": "^2.6.2",
     "semantic-release": "^19.0.3",
-    "ts-jest": "^28.0.3",
+    "ts-jest": "^28.0.5",
     "typescript": "^4.7.4",
     "validate-commit-msg": "^2.12.1"
   },
