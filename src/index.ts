@@ -19,16 +19,19 @@ yargs(hideBin(process.argv))
           type: 'string',
           demandOption: true,
           describe: 'Tokens file',
+          alias: 'i',
         })
         .option('package', {
           type: 'string',
           demandOption: true,
           describe: 'Package name',
+          alias: 'p',
         })
         .option('destination', {
           type: 'string',
           demandOption: true,
           describe: 'Destination folder to write the files to',
+          alias: 'd',
         }),
     handler: argv => {
       setupAndroid({
