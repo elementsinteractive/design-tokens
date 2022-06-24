@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spacingFormatter can handle dictionary with spacing tokens 1`] = `
+"package nl.elements.skeleton
+
+/* Test header */
+
+object Spacings {
+  const val xxxs = 4
+  const val xxs = 8
+  const val xs = 12
+}"
+`;

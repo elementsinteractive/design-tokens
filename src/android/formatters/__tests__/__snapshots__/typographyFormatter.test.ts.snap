@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`typographyFormatter can handle dictionary with typography tokens 1`] = `
+"package nl.elements.skeleton
+
+/* Test header */
+import androidx.compose.material.Typography
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import com.airbnb.android.showkase.annotation.ShowkaseTypography
+
+@ShowkaseTypography(name = \\"H1\\", group = \\"material\\")
+val H1 = TextStyle(
+    fontWeight = FontWeight.Light,
+    fontSize = 96.sp,
+    letterSpacing = (-1.5).sp,
+)
+
+@ShowkaseTypography(name = \\"H2\\", group = \\"material\\")
+val H2 = TextStyle(
+    fontWeight = FontWeight.Light,
+    fontSize = 60.sp,
+    letterSpacing = (-0.5).sp,
+)
+
+val AppTypography = Typography(
+    H1 = H1,
+    H2 = H2,
+)"
+`;
