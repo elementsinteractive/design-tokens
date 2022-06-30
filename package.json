@@ -28,17 +28,14 @@
     "commitmsg": "validate-commit-msg",
     "build": "tsc && yarn copy-files",
     "test": "jest",
-    "predocs": "rm -rf docs/",
-    "docs": "esdoc -c .esdoc.json",
-    "prepack": "npm run build",
-    "prepublish": "npm run build",
-    "semantic-release": "semantic-release pre && npm run publish && semantic-release post",
+    "prepublish": "yarn build",
     "prettier": "prettier",
     "prettier-write": "yarn prettier -- --parser typescript --no-semi --trailing-comma all --write --print-width 120",
     "prettier-project": "yarn prettier-write -- 'lib/**/*.{ts,tsx}'",
     "lint": "eslint \"lib/**/*.ts\"",
     "local": "sudo npm i -g && elements-design-tokens",
-    "copy-files": "copyfiles -u 1 src/**/*.ejs dist/"
+    "copy-files": "copyfiles -u 1 src/**/*.ejs dist/",
+    "semantic-release": "semantic-release"
   },
   "license": "MIT",
   "engines": {
@@ -98,5 +95,21 @@
       "\\.snap$",
       "<rootDir>/node_modules/"
     ]
-  }
+  },
+  "release":{
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+   }
 }
