@@ -1,6 +1,6 @@
 export type Platform = 'android'
 
-export type AndroidConfig = {
+type BasicConfig = {
   /**
    * Input json file with tokens
    */
@@ -9,10 +9,16 @@ export type AndroidConfig = {
   /**
    * Package name to be used for the Kotlin files
    */
-   packageName: string
+  packageName: string
 
   /**
    * Destination
    */
   destination: string
 }
+
+/** A config to create Android templates */
+export interface AndroidConfig extends BasicConfig { }
+
+/** A config to create iOS templates */
+export interface IOSConfig extends BasicConfig { }

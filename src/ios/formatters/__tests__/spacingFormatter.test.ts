@@ -8,7 +8,7 @@ import { HEADER } from './constants'
 
 describe('spacingFormatter', () => {
   it('can handle dictionary with spacing tokens', () => {
-    const { spacingsTemplate } = TEMPLATES('')
+    const { spacingsTemplate } = TEMPLATES('', 'DesignSystem')
 
     const spacingConfig: FormatterConfig = {
       template: spacingsTemplate.source,

@@ -8,7 +8,7 @@ import { HEADER } from './constants'
 
 describe('typographyFormatter', () => {
   it('can handle dictionary with typography tokens', () => {
-    const { typographyTemplate } = TEMPLATES('')
+    const { typographyTemplate } = TEMPLATES('', 'DesignSystem')
 
     const typographyConfig: FormatterConfig = {
       template: typographyTemplate.source,

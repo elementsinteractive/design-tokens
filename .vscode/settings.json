@@ -13,8 +13,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript", "typescript"],
-  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "editor.formatOnSave": false,
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {

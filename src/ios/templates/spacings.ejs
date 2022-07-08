@@ -1,0 +1,9 @@
+<%= header %>
+
+import SwiftUI
+    
+public struct Spacing {
+  <%_ for (const { name, value } of spacings) { _%>
+  public static let pt<%= parseInt(value) %> = CGFloat(<%= value %>)
+  <%_ } _%>
+}

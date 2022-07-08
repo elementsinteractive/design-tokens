@@ -8,7 +8,7 @@ import { HEADER } from './constants'
 
 describe('colorFormatter', () => {
   it('can handle dictionary with color tokens', () => {
-    const { colorsTemplate } = TEMPLATES('')
+    const { colorsTemplate } = TEMPLATES('', 'DesignSystem')
 
     const colorConfig: FormatterConfig = {
       template: colorsTemplate.source,
