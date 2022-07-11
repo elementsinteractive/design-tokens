@@ -11,7 +11,7 @@ public extension Color {
   ///
   /// Xcode's autocomplete allows for easy discovery of design system colors.
   /// At any call site that requires a color, type \`Color.DesignSystem.<esc>\`
-  struct DesignSystem {
+  struct LightTheme {
     public static let primary = Color(hex: 0xffffffff)
     public static let background = Color(hex: 0xfff4f4f4)
     public static let primaryVariant = Color(hex: 0xff000000)

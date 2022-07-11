@@ -1,6 +1,6 @@
 import { Formatter } from 'style-dictionary'
 import { useTemplate } from '../../utils'
-import { FormatterConfig } from '../../common/types'
+import { FormatterConfig } from '../types'
 
 export const spacingFormatter: (config: FormatterConfig) => Formatter =
   (config: FormatterConfig) =>

@@ -3,7 +3,7 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 
 import { TEMPLATES } from '../../constants'
 import { colorFormatter } from '../colorFormatter'
-import { FormatterConfig } from '../../../common/types'
+import { FormatterConfig } from '../../types'
 import { HEADER } from './constants'
 
 describe('colorFormatter', () => {

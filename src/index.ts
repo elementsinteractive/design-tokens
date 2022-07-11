@@ -53,11 +53,11 @@ yargs(hideBin(process.argv))
           describe: 'Tokens file',
           alias: 'i',
         })
-        .option('package', {
+        .option('theme', {
           type: 'string',
           demandOption: true,
-          describe: 'Package name',
-          alias: 'p',
+          describe: 'Theme name, ex. "DarkTheme"',
+          alias: 't',
         })
         .option('destination', {
           type: 'string',
@@ -68,7 +68,7 @@ yargs(hideBin(process.argv))
     handler: argv => {
       setupIOS({
         input: argv.input,
-        packageName: argv.package,
+        themeName: argv.theme,
         destination: argv.destination,
       })
     },

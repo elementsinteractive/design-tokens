@@ -1,12 +1,12 @@
 import Color from 'tinycolor2'
 import { useTemplate } from '../../utils'
 import type { Formatter } from 'style-dictionary'
-import { FormatterConfig } from '../../common/types'
+import { FormatterConfig } from '../types'
 
 export const colorFormatter: (config: FormatterConfig) => Formatter =
   (config: FormatterConfig) =>
     ({ dictionary }) => {
-      const { template, header, packageName } = config
+      const { template, header, themeName } = config
 
       const tokens = dictionary.allTokens
 
@@ -24,6 +24,6 @@ export const colorFormatter: (config: FormatterConfig) => Formatter =
       return useTemplate(template)({
         header,
         colors,
-        packageName,
+        themeName,
       })
     }

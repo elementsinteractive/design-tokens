@@ -2,7 +2,7 @@ import createDictionary from 'style-dictionary/lib/utils/createDictionary'
 import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 
 import { TEMPLATES } from '../../constants'
-import { FormatterConfig } from '../../../common/types'
+import { FormatterConfig } from '../../types'
 import { typographyFormatter } from '../typographyFormatter'
 import { HEADER } from './constants'
 

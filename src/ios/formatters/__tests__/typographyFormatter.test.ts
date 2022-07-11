@@ -2,18 +2,18 @@ import createDictionary from 'style-dictionary/lib/utils/createDictionary'
 import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 
 import { TEMPLATES } from '../../constants'
-import { FormatterConfig } from '../../../common/types'
+import { FormatterConfig } from '../../types'
 import { typographyFormatter } from '../typographyFormatter'
 import { HEADER } from './constants'
 
 describe('typographyFormatter', () => {
   it('can handle dictionary with typography tokens', () => {
-    const { typographyTemplate } = TEMPLATES('', 'DesignSystem')
+    const { typographyTemplate } = TEMPLATES('')
 
     const typographyConfig: FormatterConfig = {
       template: typographyTemplate.source,
       header: HEADER,
-      packageName: 'nl.elements.skeleton',
+      themeName: 'LightTheme',
     }
 
     const properties = {

@@ -1,11 +1,11 @@
 import { Formatter } from 'style-dictionary'
 import { useTemplate } from '../../utils'
-import { FormatterConfig } from '../../common/types'
+import { FormatterConfig } from '../types'
 
 export const spacingFormatter: (config: FormatterConfig) => Formatter =
   (config: FormatterConfig) =>
     ({ dictionary }) => {
-      const { template, header, packageName } = config
+      const { template, header, themeName } = config
 
       const tokens = dictionary.allTokens
 
@@ -17,6 +17,6 @@ export const spacingFormatter: (config: FormatterConfig) => Formatter =
       return useTemplate(template)({
         header,
         spacings,
-        packageName,
+        themeName,
       })
     }

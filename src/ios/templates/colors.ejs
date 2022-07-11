@@ -8,7 +8,7 @@ public extension Color {
   ///
   /// Xcode's autocomplete allows for easy discovery of design system colors.
   /// At any call site that requires a color, type `Color.DesignSystem.<esc>`
-  struct DesignSystem {
+  struct <%= themeName %> {
     <%_ for (const { name, value } of colors) { _%>
     public static let <%= name %> = Color(hex: 0x<%= value %>)
     <%_ } _%>

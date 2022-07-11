@@ -1,27 +1,21 @@
 import { join } from 'path'
 
-export const TEMPLATES = (destination: string, packageName: string) => ({
-  packageTemplate: {
-    source: join(__dirname, './templates/swiftpackage.ejs'),
-    destination: `${destination}/Package.swift`,
-    filter: 'package',
-    formatter: 'ios/swiftPackage',
-  },
+export const TEMPLATES = (destination: string) => ({
   typographyTemplate: {
     source: join(__dirname, './templates/typographies.ejs'),
-    destination: `${destination}/Sources/${packageName}/Fonts.swift`,
+    destination: `${destination}/Fonts.swift`,
     filter: 'isTypography',
     formatter: 'ios/typography',
   },
   spacingsTemplate: {
     source: join(__dirname, './templates/spacings.ejs'),
-    destination: `${destination}/Sources/${packageName}/Spacings.swift`,
+    destination: `${destination}/Spacings.swift`,
     filter: 'isSpacing',
     formatter: 'ios/spacings',
   },
   colorsTemplate: {
     source: join(__dirname, './templates/colors.ejs'),
-    destination: `${destination}/Sources/${packageName}/Colors.swift`,
+    destination: `${destination}/Colors.swift`,
     filter: 'color',
     formatter: 'ios/colors',
   },
