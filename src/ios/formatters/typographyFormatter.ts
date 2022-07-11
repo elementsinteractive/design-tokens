@@ -1,6 +1,5 @@
-import Color from 'tinycolor2'
 import { useTemplate } from '../../utils'
-import type { Dictionary, Formatter } from 'style-dictionary'
+import type { Formatter } from 'style-dictionary'
 import { FormatterConfig } from '../types'
 
 export const typographyFormatter: (config: FormatterConfig) => Formatter =
