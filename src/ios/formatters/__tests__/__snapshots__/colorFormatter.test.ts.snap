@@ -13,9 +13,9 @@ public extension Color {
   /// At any call site that requires a color, type \`Color.DesignSystem.<esc>\`
   struct LightTheme {
     public static let primary = Color(hex: 0xffffffff)
-    public static let background = Color(hex: 0xfff4f4f4)
-    public static let primaryVariant = Color(hex: 0xff000000)
-    public static let secondary = Color(hex: 0xffff495b)
+    public static let background = Color(hex: 0xf4f4f4ff)
+    public static let primaryVariant = Color(hex: 0x000000ff)
+    public static let secondary = Color(hex: 0xff495bff)
   }
 
   /// Initializer for hex-colors.
@@ -28,10 +28,10 @@ public extension Color {
 private extension UIColor {
   convenience init(_ rgbValue: Int) {
       self.init(
-          red: CGFloat((Float((rgbValue & 0xff0000) >> 16)) / 255.0),
-          green: CGFloat((Float((rgbValue & 0x00ff00) >> 8)) / 255.0),
-          blue: CGFloat((Float((rgbValue & 0x0000ff) >> 0)) / 255.0),
-          alpha: 1.0)
+          red: CGFloat((Float((rgbValue & 0xff000000) >> 24)) / 255.0),
+          green: CGFloat((Float((rgbValue & 0x00ff0000) >> 16)) / 255.0),
+          blue: CGFloat((Float((rgbValue & 0x0000ff00) >> 8)) / 255.0),
+          alpha: CGFloat((Float((rgbValue & 0x000000ff) >> 0)) / 255.0))
   }
 }"
 `;

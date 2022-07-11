@@ -10,15 +10,9 @@ export const colorFormatter: (config: FormatterConfig) => Formatter =
 
       const tokens = dictionary.allTokens
 
-      const toArgb = color => {
-        const colorStr = Color(color).toHex8()
-
-        return colorStr.slice(6) + colorStr.slice(0, 6)
-      }
-
       const colors = tokens.map(({ name, value }) => ({
         name,
-        value: toArgb(value),
+        value: Color(value).toHex8(),
       }))
 
       return useTemplate(template)({
