@@ -4,8 +4,7 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { colorFormatter } from '../colorFormatter'
 import { FormatterConfig } from '../../types'
-import { HEADER } from '../../../common/formatters/__tests__/constants'
-import properties from '../../../common/formatters/__tests__/colorProperties'
+import { PROPERTIES, HEADER } from '../../../common/formatters/__tests__/constants'
 
 describe('colorFormatter', () => {
   it('can handle dictionary with color tokens', () => {
@@ -17,7 +16,7 @@ describe('colorFormatter', () => {
       packageName: 'nl.elements.skeleton',
     }
 
-    const dictionary = createDictionary({ properties })
+    const dictionary = createDictionary({ properties: PROPERTIES.colors })
     const formatterArgs = createFormatArgs({ dictionary, platform: {} })
 
     const formatter = colorFormatter(colorConfig)(formatterArgs)

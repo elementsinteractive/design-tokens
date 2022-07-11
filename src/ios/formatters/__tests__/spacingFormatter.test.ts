@@ -4,8 +4,7 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { FormatterConfig } from '../../types'
 import { spacingFormatter } from '../spacingFormatter'
-import { HEADER } from '../../../common/formatters/__tests__/constants'
-import properties from '../../../common/formatters/__tests__/spacingProperties'
+import { PROPERTIES, HEADER } from '../../../common/formatters/__tests__/constants'
 
 describe('spacingFormatter', () => {
   it('can handle dictionary with spacing tokens', () => {
@@ -17,7 +16,7 @@ describe('spacingFormatter', () => {
       themeName: 'LightTheme',
     }
 
-    const dictionary = createDictionary({ properties })
+    const dictionary = createDictionary({ properties: PROPERTIES.spacings })
     const formatterArgs = createFormatArgs({ dictionary, platform: {} })
 
     const formatter = spacingFormatter(spacingConfig)(formatterArgs)

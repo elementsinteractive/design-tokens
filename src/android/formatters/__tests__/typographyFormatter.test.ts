@@ -4,8 +4,7 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { FormatterConfig } from '../../types'
 import { typographyFormatter } from '../typographyFormatter'
-import { HEADER } from '../../../common/formatters/__tests__/constants'
-import properties from '../../../common/formatters/__tests__/typographyProperties'
+import { PROPERTIES, HEADER } from '../../../common/formatters/__tests__/constants'
 
 describe('typographyFormatter', () => {
   it('can handle dictionary with typography tokens', () => {
@@ -17,7 +16,7 @@ describe('typographyFormatter', () => {
       packageName: 'nl.elements.skeleton',
     }
 
-    const dictionary = createDictionary({ properties })
+    const dictionary = createDictionary({ properties: PROPERTIES.typography })
     const formatterArgs = createFormatArgs({ dictionary, platform: {} })
 
     const formatter = typographyFormatter(typographyConfig)(formatterArgs)
