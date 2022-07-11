@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorFormatter can handle dictionary with color tokens 1`] = `
+"/* Test header */
+
+import SwiftUI
+
+public extension Color {
+  /// Namespace to prevent naming collisions with static accessors on
+  /// SwiftUI's Color.
+  ///
+  /// Xcode's autocomplete allows for easy discovery of design system colors.
+  /// At any call site that requires a color, type \`Color.DesignSystem.<esc>\`
+  struct LightTheme {
+    public static let primary = Color(hex: 0xffffffff)
+    public static let background = Color(hex: 0xf4f4f4ff)
+    public static let primaryVariant = Color(hex: 0x000000ff)
+    public static let secondary = Color(hex: 0xff495bff)
+  }
+
+  /// Initializer for hex-colors.
+  /// - Parameter hex: color value.
+  private init(hex: Int) {
+    self.init(UIColor(hex))
+  }
+}
+
+private extension UIColor {
+  convenience init(_ rgbValue: Int) {
+      self.init(
+          red: CGFloat((Float((rgbValue & 0xff000000) >> 24)) / 255.0),
+          green: CGFloat((Float((rgbValue & 0x00ff0000) >> 16)) / 255.0),
+          blue: CGFloat((Float((rgbValue & 0x0000ff00) >> 8)) / 255.0),
+          alpha: CGFloat((Float((rgbValue & 0x000000ff) >> 0)) / 255.0))
+  }
+}"
+`;

@@ -20,6 +20,7 @@ With this library you can generate the theme code for a specific platform.
 ## Supported platforms
 
 - Android with Compose UI
+- iOS with SwiftUI
 
 ## Installation
 
@@ -51,7 +52,7 @@ elements-design-tokens <platform>
 | --------- | ---------- | ----------------------- |
 | --help    | -h         | Display help content    |
 | --version | -v         | Display current version |
-| platform  |            | Values: android         |
+| platform  |            | Values: android, ios    |
 
 ### Android
 
@@ -63,4 +64,16 @@ elements-design-tokens android
 | ----------------------------- | ---------- | --------------------------------- |
 | --input \[input\]             | -i         | JSON file with design tokens      |
 | --package \[package\]         | -p         | Kotlin package name               |
+| --destination \[destination\] | -d         | Where to write the generated code |
+
+### iOS
+
+```bash
+elements-design-tokens ios
+```
+
+| Flag                          | Short Flag | Description                       |
+| ----------------------------- | ---------- | --------------------------------- |
+| --input \[input\]             | -i         | JSON file with design tokens      |
+| --theme \[theme\]             | -t         | Theme name, ex. LightTheme        |
 | --destination \[destination\] | -d         | Where to write the generated code |

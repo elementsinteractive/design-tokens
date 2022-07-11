@@ -13,7 +13,7 @@ describe('typographyFormatter', () => {
     const typographyConfig: FormatterConfig = {
       template: typographyTemplate.source,
       header: HEADER,
-      packageName: 'nl.elements.skeleton',
+      themeName: 'LightTheme',
     }
 
     const dictionary = createDictionary({ properties: PROPERTIES.typography })
