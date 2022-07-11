@@ -4,7 +4,8 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { FormatterConfig } from '../../types'
 import { typographyFormatter } from '../typographyFormatter'
-import { HEADER } from './constants'
+import { HEADER } from '../../../common/formatters/__tests__/constants'
+import properties from '../../../common/formatters/__tests__/typographyProperties'
 
 describe('typographyFormatter', () => {
   it('can handle dictionary with typography tokens', () => {
@@ -14,37 +15,6 @@ describe('typographyFormatter', () => {
       template: typographyTemplate.source,
       header: HEADER,
       themeName: 'LightTheme',
-    }
-
-    const properties = {
-      H1: {
-        value: {
-          fontFamily: 'Roboto',
-          fontWeight: 'Light',
-          lineHeight: 'AUTO',
-          fontSize: 96,
-          letterSpacing: -1.5,
-          paragraphSpacing: 0,
-          textDecoration: 'none',
-          textCase: 'none',
-        },
-        type: 'typography',
-        description: 'Header',
-      },
-      H2: {
-        value: {
-          fontFamily: 'Roboto',
-          fontWeight: 'Light',
-          lineHeight: 'AUTO',
-          fontSize: 60,
-          letterSpacing: -0.5,
-          paragraphSpacing: 0,
-          textDecoration: 'none',
-          textCase: 'none',
-        },
-        type: 'typography',
-        description: 'Header',
-      },
     }
 
     const dictionary = createDictionary({ properties })

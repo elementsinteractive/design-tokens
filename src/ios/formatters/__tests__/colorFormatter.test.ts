@@ -4,7 +4,8 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { colorFormatter } from '../colorFormatter'
 import { FormatterConfig } from '../../types'
-import { HEADER } from './constants'
+import { HEADER } from '../../../common/formatters/__tests__/constants'
+import properties from '../../../common/formatters/__tests__/colorProperties'
 
 describe('colorFormatter', () => {
   it('can handle dictionary with color tokens', () => {
@@ -14,31 +15,6 @@ describe('colorFormatter', () => {
       template: colorsTemplate.source,
       header: HEADER,
       themeName: 'LightTheme',
-    }
-
-    const properties = {
-      colors: {
-        primary: {
-          name: 'primary',
-          value: '#fff',
-          type: 'color',
-        },
-        background: {
-          name: 'background',
-          value: '#F4F4F4FF',
-          type: 'color',
-        },
-        primaryVariant: {
-          name: 'primaryVariant',
-          value: '#000',
-          type: 'color',
-        },
-        secondary: {
-          name: 'secondary',
-          value: '#FF495BFF',
-          type: 'color',
-        },
-      },
     }
 
     const dictionary = createDictionary({ properties })

@@ -4,7 +4,8 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { FormatterConfig } from '../../types'
 import { spacingFormatter } from '../spacingFormatter'
-import { HEADER } from './constants'
+import { HEADER } from '../../../common/formatters/__tests__/constants'
+import properties from '../../../common/formatters/__tests__/spacingProperties'
 
 describe('spacingFormatter', () => {
   it('can handle dictionary with spacing tokens', () => {
@@ -14,29 +15,6 @@ describe('spacingFormatter', () => {
       template: spacingsTemplate.source,
       header: HEADER,
       packageName: 'nl.elements.skeleton',
-    }
-
-    const properties = {
-      spacings: {
-        xxxs: {
-          name: 'xxxs',
-          value: 4,
-          type: 'spacing',
-          description: 'XXXS',
-        },
-        xxs: {
-          name: 'xxs',
-          value: 8,
-          type: 'spacing',
-          description: 'XXS',
-        },
-        xs: {
-          name: 'xs',
-          value: 12,
-          type: 'spacing',
-          description: 'XS',
-        },
-      },
     }
 
     const dictionary = createDictionary({ properties })
