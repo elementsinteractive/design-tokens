@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "ejs": "^3.1.8",
+    "lodash": "^4.17.21",
     "style-dictionary": "^3.7.1",
     "tinycolor2": "^1.4.2",
     "token-transformer": "^0.0.24",
@@ -62,7 +63,6 @@
     "husky": "^8.0.1",
     "jest": "^28.1.0",
     "lint-staged": "^13.0.3",
-    "lodash": "^4.17.21",
     "prettier": "^2.6.2",
     "semantic-release": "^19.0.3",
     "ts-jest": "^28.0.5",
