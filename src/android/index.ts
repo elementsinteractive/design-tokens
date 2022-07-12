@@ -1,4 +1,6 @@
 import StyleDictionaryPackage from 'style-dictionary'
+import { readFileSync } from 'fs'
+
 import { TEMPLATES } from './constants'
 import { useTemplate } from '../utils'
 
@@ -6,13 +8,19 @@ import { AndroidConfig } from '../design.types'
 import { colorFormatter } from './formatters/colorFormatter'
 import { spacingFormatter } from './formatters/spacingFormatter'
 import { typographyFormatter } from './formatters/typographyFormatter'
+import { JsonConfigOptions } from './types'
 
-export const setup = (config: AndroidConfig) => {
-  console.log('Setting up Android', config)
+export const setup = (androidConfig: AndroidConfig) => {
+  console.log('Setting up Android', androidConfig)
 
-  const { input, packageName, destination } = config
+  const { input, configPath } = androidConfig
 
-  const templateInfo = TEMPLATES(destination)
+  const config = JSON.parse(
+    readFileSync(configPath).toString(),
+  ) as JsonConfigOptions
+  const { theme } = config
+
+  const templateInfo = TEMPLATES(theme)
 
   const {
     headerTemplate,
@@ -31,7 +39,7 @@ export const setup = (config: AndroidConfig) => {
     formatter: typographyFormatter({
       template: typographyTemplate.source,
       header,
-      packageName,
+      packageName: typographyTemplate.packageName,
     }),
   })
 
@@ -40,7 +48,7 @@ export const setup = (config: AndroidConfig) => {
     formatter: spacingFormatter({
       template: spacingsTemplate.source,
       header,
-      packageName,
+      packageName: spacingsTemplate.packageName,
     }),
   })
 
@@ -49,7 +57,7 @@ export const setup = (config: AndroidConfig) => {
     formatter: colorFormatter({
       template: colorsTemplate.source,
       header,
-      packageName,
+      packageName: colorsTemplate.packageName,
     }),
   })
 
