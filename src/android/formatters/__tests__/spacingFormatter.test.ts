@@ -4,11 +4,15 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { FormatterConfig } from '../../types'
 import { spacingFormatter } from '../spacingFormatter'
-import { PROPERTIES, HEADER } from '../../../common/formatters/__tests__/constants'
+import {
+  PROPERTIES,
+  HEADER,
+} from '../../../common/formatters/__tests__/constants'
+import { DUMMY_ANDROID_THEME } from './constants'
 
 describe('spacingFormatter', () => {
   it('can handle dictionary with spacing tokens', () => {
-    const { spacingsTemplate } = TEMPLATES('')
+    const { spacingsTemplate } = TEMPLATES(DUMMY_ANDROID_THEME)
 
     const spacingConfig: FormatterConfig = {
       template: spacingsTemplate.source,
