@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spacingFormatter can handle dictionary with spacing tokens 1`] = `
+"/* Test header */
+
+import SwiftUI
+    
+public struct Spacing {
+  public static let pt4 = CGFloat(4)
+  public static let pt8 = CGFloat(8)
+  public static let pt12 = CGFloat(12)
+}"
+`;

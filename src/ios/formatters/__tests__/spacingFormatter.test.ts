@@ -13,7 +13,7 @@ describe('spacingFormatter', () => {
     const spacingConfig: FormatterConfig = {
       template: spacingsTemplate.source,
       header: HEADER,
-      packageName: 'nl.elements.skeleton',
+      themeName: 'LightTheme',
     }
 
     const dictionary = createDictionary({ properties: PROPERTIES.spacings })
