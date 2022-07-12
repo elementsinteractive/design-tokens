@@ -1,6 +1,9 @@
-import { useTemplate } from '../../utils'
 import type { Formatter } from 'style-dictionary'
+import { toLower } from 'lodash'
+
 import { FormatterConfig } from '../types'
+
+import { useTemplate } from '../../utils'
 
 export const typographyFormatter: (config: FormatterConfig) => Formatter =
   (config: FormatterConfig) =>
@@ -18,7 +21,7 @@ export const typographyFormatter: (config: FormatterConfig) => Formatter =
     const tokens = dictionary.tokens
 
     const typographies = Object.keys(tokens).map(token => ({
-      name: token,
+      name: toLower(token),
       ...tokens[token].value,
       fontWeight: mapFontWeight(tokens[token].value.fontWeight),
     }))
