@@ -11,26 +11,8 @@
 
 * adds automatic changelog generation on release ([a561a0b](https://github.com/elementsinteractive/design-tokens/commit/a561a0b41a53da9348e6c53d7ed7116ed994f1c8))
 
-# Changelog
+# [0.0.1](https://github.com/elementsinteractive/design-tokens/compare/v0.0.1...v1.0.0) (2022-07-12)
 
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-Types of changes:
-
-- _Added_ for new features
-- _Changed_ for changes in existing functionality
-- _Deprecated_ for soon-to-be removed features.
-- _Removed_ for now removed features.
-- _Fixed_ for any bug fixes.
-- _Security_ in case of vulnerabilities.
-
-## [Unreleased]
-
-## 0.0.1 - 06-07-2022
-
-### Added
+### Features
 
 - Initial set-up for Android Compose UI
