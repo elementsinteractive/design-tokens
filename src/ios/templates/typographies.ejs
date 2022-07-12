@@ -1,0 +1,67 @@
+<%= header %>
+
+import SwiftUI
+
+public extension Font {
+  /// Namespace to prevent naming collisions with static accessors on
+  /// SwiftUI's Font.
+  ///
+  /// Xcode's autocomplete allows for easy discovery of design system fonts.
+  /// At any call site that requires a font, type `Font.DesignSystem.<esc>`
+  /// TODO: Implement custom typefaces support.
+  /// TODO: Impelment `paragraphSpacing`, `textDecoration`, and `textCase` support.
+  struct DesignSystem {
+    <%_ for (const { name, fontSize, fontWeight, letterSpacing } of typographies) { _%>
+      <%_ if (letterSpacing) { _%>
+      /// Please, use `<%= letterSpacing %>` leading with this font.
+      <%_ } -%>
+      <%_ if (fontSize && fontWeight && fontWeight != "Regular") { _%>
+      public static let <%= name %> = Font.systemFont(
+        size: <%= fontSize %>,
+        weightName: "<%= fontWeight %>"
+      )
+      <%_ } -%>
+      <%_ if (fontSize && (!fontWeight || fontWeight == "Regular")) { _%>
+      public static let <%= name %> = Font.systemFont(size: <%= fontSize %>)
+      <%_ } -%>
+      <%_ if (!fontSize && fontWeight && fontWeight != "Regular") { _%>
+      public static let <%= name %> = Font.systemFont(weightName: "<%= fontWeight %>")
+      <%_ } -%>
+      <%_ if (!fontSize && (!fontWeight || fontWeight == "Regular")) { _%>
+      public static let <%= name %> = Font.systemFont()
+      <%_ } -%>
+    <%_ } _%>
+  }
+
+  private static func systemFont(size: CGFloat = 16, weightName: String = "Regular") -> Font {
+      return system(size: size).weight(weightName.asFontWeight())
+  }
+}
+
+private extension String {
+  /// Matches string with `Font.Weight` constant.
+  func asFontWeight() -> Font.Weight {
+      guard let font = Font.Weight.all[lowercased()] else {
+          assertionFailure("Unknown font weight name: \(self)")
+          return .regular
+      }
+      return font
+  }
+}
+
+private extension Font.Weight {
+  /// Returns name to font weight contstant mapping.
+  static var all: [String: Font.Weight] {
+      [
+          "ultralight": .ultraLight,
+          "thin": .thin,
+          "light": .light,
+          "regular": .regular,
+          "medium": .medium,
+          "semibold": .semibold,
+          "bold": .bold,
+          "heavy": .heavy,
+          "black": .black
+      ]
+  }
+}
