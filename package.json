@@ -31,8 +31,8 @@
     "prepublish": "yarn build",
     "prettier": "prettier",
     "prettier-write": "yarn prettier -- --parser typescript --no-semi --trailing-comma all --write --print-width 120",
-    "prettier-project": "yarn prettier-write -- 'lib/**/*.{ts,tsx}'",
-    "lint": "eslint \"lib/**/*.ts\"",
+    "prettier-project": "yarn prettier-write -- 'src/**/*.{ts,tsx}'",
+    "lint": "eslint \"src/**/*.ts\"",
     "local": "sudo npm i -g && elements-design-tokens",
     "copy-files": "copyfiles -u 1 src/**/*.ejs dist/",
     "semantic-release": "semantic-release"
