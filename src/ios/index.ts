@@ -70,13 +70,14 @@ export const setup = (config: IOSConfig) => {
     source: [input],
     platforms: {
       ios: {
-        files: [typographyTemplate, spacingsTemplate, colorsTemplate]
-          .map((template) => ({
+        transformGroup: 'name/ti/camel',
+        files: [typographyTemplate, spacingsTemplate, colorsTemplate].map(
+          template => ({
             format: template.formatter,
             destination: template.destination,
             filter: template.filter,
-          })
-          )
+          }),
+        ),
       },
     },
   })

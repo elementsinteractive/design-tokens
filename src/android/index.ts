@@ -73,6 +73,7 @@ export const setup = (config: AndroidConfig) => {
     source: [input],
     platforms: {
       android: {
+        transformGroup: 'name/ti/camel',
         files: [
           {
             format: typographyTemplate.formatter,
