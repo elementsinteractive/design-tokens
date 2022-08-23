@@ -10,7 +10,7 @@ const androidTypeFile = 'src/android/__tests__/__output/Type.kt'
 describe('android', () => {
   var config = {
     packageName: 'nl.makerstreet.design',
-    input: 'src/android/__tests__/tokens.json',
+    input: 'src/__tests__/tokens.json',
     destination: 'src/android/__tests__/__output',
   }
 

@@ -9,7 +9,7 @@ const iosSpacingsFile = 'src/ios/__tests__/__output/Spacings.swift'
 
 describe('ios', () => {
   var config = {
-    input: 'src/ios/__tests__/tokens.json',
+    input: 'src/__tests__/tokens.json',
     destination: 'src/ios/__tests__/__output',
     themeName: 'jest',
   }
