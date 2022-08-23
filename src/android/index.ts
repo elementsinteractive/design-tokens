@@ -59,9 +59,7 @@ export const setup = (config: AndroidConfig) => {
   const registerFilter = (name, type) => {
     StyleDictionaryPackage.registerFilter({
       name,
-      matcher: token => {
-        return token.type === type
-      },
+      matcher: token => token.type === type,
     })
   }
 
@@ -69,28 +67,23 @@ export const setup = (config: AndroidConfig) => {
   registerFilter(spacingsTemplate.filter, 'spacing')
   registerFilter(colorsTemplate.filter, 'color')
 
+  StyleDictionaryPackage.registerTransformGroup({
+    name: 'tokens-android',
+    transforms: ['name/ti/camel'],
+  })
+
   const StyleDictionary = StyleDictionaryPackage.extend({
     source: [input],
     platforms: {
       android: {
-        transformGroup: 'name/ti/camel',
-        files: [
-          {
-            format: typographyTemplate.formatter,
-            destination: typographyTemplate.destination,
-            filter: typographyTemplate.filter,
-          },
-          {
-            format: spacingsTemplate.formatter,
-            destination: spacingsTemplate.destination,
-            filter: spacingsTemplate.filter,
-          },
-          {
-            format: colorsTemplate.formatter,
-            destination: colorsTemplate.destination,
-            filter: colorsTemplate.filter,
-          },
-        ],
+        transformGroup: 'tokens-android',
+        files: [typographyTemplate, spacingsTemplate, colorsTemplate].map(
+          template => ({
+            format: template.formatter,
+            destination: template.destination,
+            filter: template.filter,
+          }),
+        ),
       },
     },
   })

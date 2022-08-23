@@ -66,11 +66,16 @@ export const setup = (config: IOSConfig) => {
   registerFilter(spacingsTemplate.filter, 'spacing')
   registerFilter(colorsTemplate.filter, 'color')
 
+  StyleDictionaryPackage.registerTransformGroup({
+    name: 'tokens-ios',
+    transforms: ['name/ti/camel'],
+  })
+
   const StyleDictionary = StyleDictionaryPackage.extend({
     source: [input],
     platforms: {
       ios: {
-        transformGroup: 'name/ti/camel',
+        transformGroup: 'tokens-ios',
         files: [typographyTemplate, spacingsTemplate, colorsTemplate].map(
           template => ({
             format: template.formatter,
