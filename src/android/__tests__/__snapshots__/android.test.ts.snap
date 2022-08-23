@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`android can setup with default config 1`] = `
+Array [
+  "name/ti/camel",
+]
+`;
+
+exports[`android can setup with default config 2`] = `
+"package nl.makerstreet.design
+
+/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+import androidx.compose.ui.graphics.Color
+import com.airbnb.android.showkase.annotation.ShowkaseColor
+
+@ShowkaseColor(name = \\"primaryDefault\\", group = \\"material\\")
+val primaryDefault = Color(0xffffffff)
+
+@ShowkaseColor(name = \\"primaryBackground\\", group = \\"material\\")
+val primaryBackground = Color(0xfff4f4f4)
+
+@ShowkaseColor(name = \\"primaryVariant\\", group = \\"material\\")
+val primaryVariant = Color(0xff000000)
+
+@ShowkaseColor(name = \\"secondary\\", group = \\"material\\")
+val secondary = Color(0xffff495b)
+
+@ShowkaseColor(name = \\"secondaryVariant\\", group = \\"material\\")
+val secondaryVariant = Color(0xfff4f4f4)
+
+@ShowkaseColor(name = \\"surface\\", group = \\"material\\")
+val surface = Color(0xffffffff)
+
+@ShowkaseColor(name = \\"onPrimary\\", group = \\"material\\")
+val onPrimary = Color(0xffffffff)
+
+@ShowkaseColor(name = \\"onSecondary\\", group = \\"material\\")
+val onSecondary = Color(0xff000000)
+
+@ShowkaseColor(name = \\"onBackground\\", group = \\"material\\")
+val onBackground = Color(0xff000000)
+
+@ShowkaseColor(name = \\"onSurface\\", group = \\"material\\")
+val onSurface = Color(0xff000000)
+
+@ShowkaseColor(name = \\"purple\\", group = \\"material\\")
+val purple = Color(0xff5048da)
+
+@ShowkaseColor(name = \\"white\\", group = \\"material\\")
+val white = Color(0xffffffff)
+
+@ShowkaseColor(name = \\"pink\\", group = \\"material\\")
+val pink = Color(0xffff495b)
+
+@ShowkaseColor(name = \\"black\\", group = \\"material\\")
+val black = Color(0xff000000)
+
+@ShowkaseColor(name = \\"lightGray\\", group = \\"material\\")
+val lightGray = Color(0xfff4f4f4)
+
+"
+`;
+
+exports[`android can setup with default config 3`] = `
+"package nl.makerstreet.design
+
+/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+
+object Spacings {
+  const val xxxs = 4
+  const val xxs = 8
+  const val xs = 12
+  const val s = 16
+  const val m = 24
+  const val l = 32
+  const val xl = 48
+  const val xxl = 200
+}"
+`;
+
+exports[`android can setup with default config 4`] = `
+"package nl.makerstreet.design
+
+/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+import androidx.compose.material.Typography
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import com.airbnb.android.showkase.annotation.ShowkaseTypography
+
+@ShowkaseTypography(name = \\"h1\\", group = \\"material\\")
+val h1 = TextStyle(
+    fontWeight = FontWeight.Light,
+    fontSize = 96.sp,
+    letterSpacing = (-1.5).sp,
+)
+
+@ShowkaseTypography(name = \\"h2\\", group = \\"material\\")
+val h2 = TextStyle(
+    fontWeight = FontWeight.Light,
+    fontSize = 60.sp,
+    letterSpacing = (-0.5).sp,
+)
+
+@ShowkaseTypography(name = \\"h3\\", group = \\"material\\")
+val h3 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 48.sp,
+)
+
+@ShowkaseTypography(name = \\"h4\\", group = \\"material\\")
+val h4 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 34.sp,
+    letterSpacing = (0.25).sp,
+)
+
+@ShowkaseTypography(name = \\"h5\\", group = \\"material\\")
+val h5 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 24.sp,
+)
+
+@ShowkaseTypography(name = \\"h6\\", group = \\"material\\")
+val h6 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 20.sp,
+    letterSpacing = (0.15).sp,
+)
+
+@ShowkaseTypography(name = \\"body1\\", group = \\"material\\")
+val body1 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 16.sp,
+    letterSpacing = (0.5).sp,
+)
+
+@ShowkaseTypography(name = \\"body2\\", group = \\"material\\")
+val body2 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 14.sp,
+    letterSpacing = (0.25).sp,
+)
+
+@ShowkaseTypography(name = \\"subtitle1\\", group = \\"material\\")
+val subtitle1 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 16.sp,
+    letterSpacing = (0.15).sp,
+)
+
+@ShowkaseTypography(name = \\"subtitle2\\", group = \\"material\\")
+val subtitle2 = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 14.sp,
+    letterSpacing = (0.1).sp,
+)
+
+@ShowkaseTypography(name = \\"button\\", group = \\"material\\")
+val button = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 14.sp,
+    letterSpacing = (1.25).sp,
+)
+
+@ShowkaseTypography(name = \\"caption\\", group = \\"material\\")
+val caption = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 12.sp,
+    letterSpacing = (0.4).sp,
+)
+
+@ShowkaseTypography(name = \\"overline\\", group = \\"material\\")
+val overline = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 10.sp,
+    letterSpacing = (1.5).sp,
+)
+
+val AppTypography = Typography(
+    h1 = h1,
+    h2 = h2,
+    h3 = h3,
+    h4 = h4,
+    h5 = h5,
+    h6 = h6,
+    body1 = body1,
+    body2 = body2,
+    subtitle1 = subtitle1,
+    subtitle2 = subtitle2,
+    button = button,
+    caption = caption,
+    overline = overline,
+)"
+`;
