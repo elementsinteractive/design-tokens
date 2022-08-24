@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/elementsinteractive/design-tokens/compare/v1.1.0...v1.1.1) (2022-08-24)
+
+
+### Bug Fixes
+
+* adds transform group for ios and android ([94da818](https://github.com/elementsinteractive/design-tokens/commit/94da818f78d3c2df517b57ac2bcc2f40f76cf578))
+* adds transforms for name ([0146761](https://github.com/elementsinteractive/design-tokens/commit/014676102d6e4a022dbf2293df14e4a9a7cde035))
+
 # [1.1.0](https://github.com/elementsinteractive/design-tokens/compare/v1.0.0...v1.1.0) (2022-07-12)
 
 
