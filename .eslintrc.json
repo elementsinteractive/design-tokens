@@ -14,5 +14,5 @@
     ],
     "@typescript-eslint/no-unused-vars": "off"
   },
-  "ignorePatterns": ["lib/**/*.test.ts"]
+  "ignorePatterns": ["src/**/*.test.ts"]
 }

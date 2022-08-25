@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ios can setup with default config 1`] = `
+Array [
+  "name/ti/camel",
+]
+`;
+
+exports[`ios can setup with default config 2`] = `
+"/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+
+import SwiftUI
+
+public extension Color {
+  /// Namespace to prevent naming collisions with static accessors on
+  /// SwiftUI's Color.
+  ///
+  /// Xcode's autocomplete allows for easy discovery of design system colors.
+  /// At any call site that requires a color, type \`Color.DesignSystem.<esc>\`
+  struct jest {
+    public static let primaryDefault = Color(hex: 0xffffffff)
+    public static let primaryBackground = Color(hex: 0xf4f4f4ff)
+    public static let primaryVariant = Color(hex: 0x000000ff)
+    public static let secondary = Color(hex: 0xff495bff)
+    public static let secondaryVariant = Color(hex: 0xf4f4f4ff)
+    public static let surface = Color(hex: 0xffffffff)
+    public static let onPrimary = Color(hex: 0xffffffff)
+    public static let onSecondary = Color(hex: 0x000000ff)
+    public static let onBackground = Color(hex: 0x000000ff)
+    public static let onSurface = Color(hex: 0x000000ff)
+    public static let purple = Color(hex: 0x5048daff)
+    public static let white = Color(hex: 0xffffffff)
+    public static let pink = Color(hex: 0xff495bff)
+    public static let black = Color(hex: 0x000000ff)
+    public static let lightGray = Color(hex: 0xf4f4f4ff)
+  }
+
+  /// Initializer for hex-colors.
+  /// - Parameter hex: color value.
+  private init(hex: Int) {
+    self.init(UIColor(hex))
+  }
+}
+
+private extension UIColor {
+  convenience init(_ rgbValue: Int) {
+      self.init(
+          red: CGFloat((Float((rgbValue & 0xff000000) >> 24)) / 255.0),
+          green: CGFloat((Float((rgbValue & 0x00ff0000) >> 16)) / 255.0),
+          blue: CGFloat((Float((rgbValue & 0x0000ff00) >> 8)) / 255.0),
+          alpha: CGFloat((Float((rgbValue & 0x000000ff) >> 0)) / 255.0))
+  }
+}"
+`;
+
+exports[`ios can setup with default config 3`] = `
+"/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+
+import SwiftUI
+
+public extension Font {
+  /// Namespace to prevent naming collisions with static accessors on
+  /// SwiftUI's Font.
+  ///
+  /// Xcode's autocomplete allows for easy discovery of design system fonts.
+  /// At any call site that requires a font, type \`Font.DesignSystem.<esc>\`
+  /// TODO: Implement custom typefaces support.
+  /// TODO: Impelment \`paragraphSpacing\`, \`textDecoration\`, and \`textCase\` support.
+  struct DesignSystem {
+      /// Please, use \`-1.5\` leading with this font.
+      public static let H1 = Font.systemFont(
+        size: 96,
+        weightName: \\"Light\\"
+      )
+      /// Please, use \`-0.5\` leading with this font.
+      public static let H2 = Font.systemFont(
+        size: 60,
+        weightName: \\"Light\\"
+      )
+      public static let H3 = Font.systemFont(size: 48)
+      /// Please, use \`0.25\` leading with this font.
+      public static let H4 = Font.systemFont(size: 34)
+      public static let H5 = Font.systemFont(size: 24)
+      /// Please, use \`0.15\` leading with this font.
+      public static let H6 = Font.systemFont(size: 20)
+      /// Please, use \`0.5\` leading with this font.
+      public static let Body1 = Font.systemFont(size: 16)
+      /// Please, use \`0.25\` leading with this font.
+      public static let Body2 = Font.systemFont(size: 14)
+      /// Please, use \`0.15\` leading with this font.
+      public static let Subtitle1 = Font.systemFont(size: 16)
+      /// Please, use \`0.1\` leading with this font.
+      public static let Subtitle2 = Font.systemFont(size: 14)
+      /// Please, use \`1.25\` leading with this font.
+      public static let Button = Font.systemFont(
+        size: 14,
+        weightName: \\"Medium\\"
+      )
+      /// Please, use \`0.4\` leading with this font.
+      public static let Caption = Font.systemFont(size: 12)
+      /// Please, use \`1.5\` leading with this font.
+      public static let Overline = Font.systemFont(size: 10)
+  }
+
+  private static func systemFont(size: CGFloat = 16, weightName: String = \\"Regular\\") -> Font {
+      return system(size: size).weight(weightName.asFontWeight())
+  }
+}
+
+private extension String {
+  /// Matches string with \`Font.Weight\` constant.
+  func asFontWeight() -> Font.Weight {
+      guard let font = Font.Weight.all[lowercased()] else {
+          assertionFailure(\\"Unknown font weight name: \\\\(self)\\")
+          return .regular
+      }
+      return font
+  }
+}
+
+private extension Font.Weight {
+  /// Returns name to font weight contstant mapping.
+  static var all: [String: Font.Weight] {
+      [
+          \\"ultralight\\": .ultraLight,
+          \\"thin\\": .thin,
+          \\"light\\": .light,
+          \\"regular\\": .regular,
+          \\"medium\\": .medium,
+          \\"semibold\\": .semibold,
+          \\"bold\\": .bold,
+          \\"heavy\\": .heavy,
+          \\"black\\": .black
+      ]
+  }
+}"
+`;
+
+exports[`ios can setup with default config 4`] = `
+"/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+
+import SwiftUI
+    
+public struct Spacing {
+  public static let pt4 = CGFloat(4)
+  public static let pt8 = CGFloat(8)
+  public static let pt12 = CGFloat(12)
+  public static let pt16 = CGFloat(16)
+  public static let pt24 = CGFloat(24)
+  public static let pt32 = CGFloat(32)
+  public static let pt48 = CGFloat(48)
+  public static let pt200 = CGFloat(200)
+}"
+`;

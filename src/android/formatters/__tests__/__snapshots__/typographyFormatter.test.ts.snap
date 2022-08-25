@@ -10,22 +10,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.airbnb.android.showkase.annotation.ShowkaseTypography
 
-@ShowkaseTypography(name = \\"H1\\", group = \\"material\\")
-val H1 = TextStyle(
+@ShowkaseTypography(name = \\"h1\\", group = \\"material\\")
+val h1 = TextStyle(
     fontWeight = FontWeight.Light,
     fontSize = 96.sp,
     letterSpacing = (-1.5).sp,
 )
 
-@ShowkaseTypography(name = \\"H2\\", group = \\"material\\")
-val H2 = TextStyle(
+@ShowkaseTypography(name = \\"h2\\", group = \\"material\\")
+val h2 = TextStyle(
     fontWeight = FontWeight.Light,
     fontSize = 60.sp,
     letterSpacing = (-0.5).sp,
 )
 
 val AppTypography = Typography(
-    H1 = H1,
-    H2 = H2,
+    h1 = h1,
+    h2 = h2,
 )"
 `;
