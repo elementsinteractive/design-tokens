@@ -2,7 +2,7 @@ import StyleDictionaryPackage from 'style-dictionary'
 import { clearOutput, fileExists, fileToString } from '../../common/helpers'
 import { createConfig } from '../config'
 import { ColorFilename, SpacingFilename, TypeFilename } from '../constants'
-import { readOptionsAsJson } from '../helpers'
+import { readJsonFileAsOptions } from '../helpers'
 import { styleDictionaryRegistrations } from '../styleDictionaryRegistrations'
 import { AndroidJsonOptions } from '../types'
 
@@ -19,7 +19,7 @@ describe('android', () => {
   beforeAll(() => {
     const { input, configPath } = config
 
-    options = readOptionsAsJson(configPath)
+    options = readJsonFileAsOptions(configPath)
 
     styleDictionaryRegistrations(options)
 

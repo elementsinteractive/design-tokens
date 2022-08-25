@@ -2,7 +2,7 @@ import StyleDictionaryPackage from 'style-dictionary'
 
 import { AndroidConfig } from '../design.types'
 import { createConfig } from './config'
-import { readOptionsAsJson } from './helpers'
+import { readJsonFileAsOptions } from './helpers'
 import { styleDictionaryRegistrations } from './styleDictionaryRegistrations'
 
 export const setup = (androidConfig: AndroidConfig) => {
@@ -10,14 +10,14 @@ export const setup = (androidConfig: AndroidConfig) => {
 
   const { configPath, input } = androidConfig
 
-  const config = readOptionsAsJson(configPath)
+  const options = readJsonFileAsOptions(configPath)
 
-  console.log('Using options')
+  console.log('Using options', options)
 
-  styleDictionaryRegistrations(config)
+  styleDictionaryRegistrations(options)
 
   const StyleDictionary = StyleDictionaryPackage.extend(
-    createConfig(input, config),
+    createConfig(input, options),
   )
 
   console.log('Building for platform Android')

@@ -1,5 +1,4 @@
 import StyleDictionaryPackage from 'style-dictionary'
-import { AndroidConfig } from '../design.types'
 import { useTemplate } from '../utils'
 import { TEMPLATES } from './constants'
 import { colorFormatter } from './formatters/colorFormatter'
