@@ -25,7 +25,7 @@ yargs(hideBin(process.argv))
         .option('config', {
           type: 'string',
           demandOption: true,
-          describe: 'Configuration file',
+          describe: 'Options file',
           alias: 'c',
         }),
     handler: argv => {

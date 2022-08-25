@@ -17,6 +17,6 @@ export type AndroidTheme = {
   spacings: ThemeFileOptions
 }
 
-export type JsonConfigOptions = {
+export type AndroidJsonOptions = {
   theme: AndroidTheme
 }

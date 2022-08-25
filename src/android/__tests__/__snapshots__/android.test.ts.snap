@@ -7,7 +7,7 @@ Array [
 `;
 
 exports[`android can setup with default config 2`] = `
-"package nl.makerstreet.design
+"package nl.makerstreet.design.colors
 
 /**
  * ⚠️ DO NOT MODIFY ⚠️
@@ -67,7 +67,7 @@ val lightGray = Color(0xfff4f4f4)
 `;
 
 exports[`android can setup with default config 3`] = `
-"package nl.makerstreet.design
+"package nl.makerstreet.design.spacings
 
 /**
  * ⚠️ DO NOT MODIFY ⚠️
@@ -89,7 +89,7 @@ object Spacings {
 `;
 
 exports[`android can setup with default config 4`] = `
-"package nl.makerstreet.design
+"package nl.makerstreet.design.typography
 
 /**
  * ⚠️ DO NOT MODIFY ⚠️

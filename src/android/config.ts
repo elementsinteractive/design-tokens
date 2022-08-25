@@ -1,12 +1,12 @@
 import { AndroidConfig } from '../design.types'
 import { TEMPLATES } from './constants'
+import { AndroidJsonOptions } from './types'
 
-export const createConfig = (config: AndroidConfig) => {
-  const { input, destination } = config
+export const createConfig = (input: string, options: AndroidJsonOptions) => {
+  const { theme } = options
 
-  const templateInfo = TEMPLATES(destination)
-
-  const { colorsTemplate, spacingsTemplate, typographyTemplate } = templateInfo
+  const { colorsTemplate, spacingsTemplate, typographyTemplate } =
+    TEMPLATES(theme)
 
   return {
     source: [input],
