@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/elementsinteractive/design-tokens/compare/v1.1.1...v1.2.0) (2022-08-26)
+
+
+### Bug Fixes
+
+* naming ([ac0ab9d](https://github.com/elementsinteractive/design-tokens/commit/ac0ab9dde7a4afa17a87bba78c11f29a47d4412a))
+
+
+### Features
+
+* adds json configuration file for android set-up ([63096b1](https://github.com/elementsinteractive/design-tokens/commit/63096b198b9b60e62a047d94e3765a296477eb84))
+
 ## [1.1.1](https://github.com/elementsinteractive/design-tokens/compare/v1.1.0...v1.1.1) (2022-08-24)
 
 
