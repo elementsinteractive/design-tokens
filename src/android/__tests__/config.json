@@ -1,0 +1,16 @@
+{
+  "theme": {
+    "typography": {
+      "destination": "src/android/__tests__/__output/base",
+      "packageName": "nl.makerstreet.design.typography"
+    },
+    "colors": {
+      "destination": "src/android/__tests__/__output/light",
+      "packageName": "nl.makerstreet.design.colors"
+    },
+    "spacings": {
+      "destination": "src/android/__tests__/__output/base",
+      "packageName": "nl.makerstreet.design.spacings"
+    }
+  }
+}

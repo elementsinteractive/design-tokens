@@ -17,7 +17,7 @@
     "javascript",
     "typescript"
   ],
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {

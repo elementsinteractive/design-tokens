@@ -1,15 +1,15 @@
 import StyleDictionaryPackage from 'style-dictionary'
-import { AndroidConfig } from '../design.types'
 import { useTemplate } from '../utils'
 import { TEMPLATES } from './constants'
 import { colorFormatter } from './formatters/colorFormatter'
 import { spacingFormatter } from './formatters/spacingFormatter'
 import { typographyFormatter } from './formatters/typographyFormatter'
+import { AndroidJsonOptions } from './types'
 
-export const styleDictionaryRegistrations = (config: AndroidConfig) => {
-  const { packageName, destination } = config
+export const styleDictionaryRegistrations = (options: AndroidJsonOptions) => {
+  const { theme } = options
 
-  const templateInfo = TEMPLATES(destination)
+  const templateInfo = TEMPLATES(theme)
 
   const {
     headerTemplate,
@@ -28,7 +28,7 @@ export const styleDictionaryRegistrations = (config: AndroidConfig) => {
     formatter: typographyFormatter({
       template: typographyTemplate.source,
       header,
-      packageName,
+      packageName: typographyTemplate.packageName,
     }),
   })
 
@@ -37,7 +37,7 @@ export const styleDictionaryRegistrations = (config: AndroidConfig) => {
     formatter: spacingFormatter({
       template: spacingsTemplate.source,
       header,
-      packageName,
+      packageName: spacingsTemplate.packageName,
     }),
   })
 
@@ -46,7 +46,7 @@ export const styleDictionaryRegistrations = (config: AndroidConfig) => {
     formatter: colorFormatter({
       template: colorsTemplate.source,
       header,
-      packageName,
+      packageName: colorsTemplate.packageName,
     }),
   })
 

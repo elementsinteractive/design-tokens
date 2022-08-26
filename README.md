@@ -60,11 +60,33 @@ elements-design-tokens <platform>
 elements-design-tokens android
 ```
 
-| Flag                          | Short Flag | Description                       |
-| ----------------------------- | ---------- | --------------------------------- |
-| --input \[input\]             | -i         | JSON file with design tokens      |
-| --package \[package\]         | -p         | Kotlin package name               |
-| --destination \[destination\] | -d         | Where to write the generated code |
+| Flag                | Short Flag | Description                                      |
+| ------------------- | ---------- | ------------------------------------------------ |
+| --input \[input\]   | -i         | JSON file with design tokens                     |
+| --config \[config\] | -c         | JSON file with configuration for the theme files |
+
+#### Config file
+
+Contains configuration for the different theme files. Including where to store the file and which packageName to use
+
+```json
+{
+  "theme": {
+    "typography": {
+      "destination": "",
+      "packageName": ""
+    },
+    "colors: {
+      "destination": "",
+      "packageName": ""
+    },
+    "spacings": {
+      "destination": "",
+      "packageName": ""
+    }
+  }
+}
+```
 
 ### iOS
 

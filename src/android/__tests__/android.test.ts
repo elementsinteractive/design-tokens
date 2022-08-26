@@ -1,26 +1,30 @@
 import StyleDictionaryPackage from 'style-dictionary'
 import { clearOutput, fileExists, fileToString } from '../../common/helpers'
 import { createConfig } from '../config'
+import { ColorFilename, SpacingFilename, TypeFilename } from '../constants'
+import { readJsonFileAsOptions } from '../helpers'
 import { styleDictionaryRegistrations } from '../styleDictionaryRegistrations'
-
-const androidColorFile = 'src/android/__tests__/__output/Color.kt'
-const androidSpacingFile = 'src/android/__tests__/__output/Spacing.kt'
-const androidTypeFile = 'src/android/__tests__/__output/Type.kt'
+import { AndroidJsonOptions } from '../types'
 
 describe('android', () => {
   var config = {
-    packageName: 'nl.makerstreet.design',
+    configPath: 'src/android/__tests__/config.json',
     input: 'src/__tests__/tokens.json',
-    destination: 'src/android/__tests__/__output',
   }
 
   let StyleDictionaryExtended
 
+  let options: AndroidJsonOptions
+
   beforeAll(() => {
-    styleDictionaryRegistrations(config)
+    const { input, configPath } = config
+
+    options = readJsonFileAsOptions(configPath)
+
+    styleDictionaryRegistrations(options)
 
     StyleDictionaryExtended = StyleDictionaryPackage.extend(
-      createConfig(config),
+      createConfig(input, options),
     )
   })
 
@@ -35,7 +39,11 @@ describe('android', () => {
       StyleDictionaryExtended.transformGroup['tokens-android'],
     ).toMatchSnapshot()
 
-    const files = [androidColorFile, androidSpacingFile, androidTypeFile]
+    const colorFile = `${options.theme.colors.destination}/${ColorFilename}`
+    const spacingFile = `${options.theme.spacings.destination}/${SpacingFilename}`
+    const typeFile = `${options.theme.typography.destination}/${TypeFilename}`
+
+    const files = [colorFile, spacingFile, typeFile]
 
     files.forEach(path => {
       expect(fileExists(path)).toBeTruthy()

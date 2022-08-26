@@ -4,11 +4,15 @@ import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 import { TEMPLATES } from '../../constants'
 import { colorFormatter } from '../colorFormatter'
 import { FormatterConfig } from '../../types'
-import { PROPERTIES, HEADER } from '../../../common/formatters/__tests__/constants'
+import {
+  PROPERTIES,
+  HEADER,
+} from '../../../common/formatters/__tests__/constants'
+import { DUMMY_ANDROID_THEME } from './constants'
 
 describe('colorFormatter', () => {
   it('can handle dictionary with color tokens', () => {
-    const { colorsTemplate } = TEMPLATES('')
+    const { colorsTemplate } = TEMPLATES(DUMMY_ANDROID_THEME)
 
     const colorConfig: FormatterConfig = {
       template: colorsTemplate.source,
