@@ -6046,10 +6046,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-token-transformer@^0.0.25:
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/token-transformer/-/token-transformer-0.0.25.tgz#325852420634f4f50c49b05e761937c823ee0ae4"
-  integrity sha512-9yvgd5IcOqad8yO+xYUFvv/eWYJPa4Fdl6xl2C//fdxevInAdTMkyHqWJ4PwWb8U9BWGNXYuMs+b9WBWkHGVUg==
+token-transformer@^0.0.27:
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/token-transformer/-/token-transformer-0.0.27.tgz#a3049f5d8a9f4984730f347ba437bb9eab616282"
+  integrity sha512-IBClwoMFrOGrlTD9ql/wArgRCe1IpKbPVfYoLPkegS9kK5yAOz7O4U8VJeZbq6FjSy73C+zLmtz7H8V5k2LqjQ==
   dependencies:
     yargs "^17.4.1"
 
