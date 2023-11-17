@@ -1,14 +1,13 @@
 import Color from 'tinycolor2'
-import { useTemplate } from '../../utils'
+import { useTemplate } from '../../../utils'
 import type { Formatter } from 'style-dictionary'
-import { FormatterConfig } from '../types'
+import { FormatterConfig } from '../../types'
 
-export const colorFormatter: (config: FormatterConfig) => Formatter =
-  (config: FormatterConfig) =>
+export const paletteFormatter =
+  (config: FormatterConfig): Formatter =>
   ({ dictionary }) => {
-    const { template, header, packageName } = config
-
     const tokens = dictionary.allTokens
+    const { template, header, packageName } = config
 
     const toArgb = color => {
       const colorStr = Color(color).toHex8()

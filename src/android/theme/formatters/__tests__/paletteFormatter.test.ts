@@ -1,21 +1,21 @@
 import createDictionary from 'style-dictionary/lib/utils/createDictionary'
 import createFormatArgs from 'style-dictionary/lib/utils/createFormatArgs'
 
-import { TEMPLATES } from '../../constants'
-import { colorFormatter } from '../colorFormatter'
-import { FormatterConfig } from '../../types'
+import { THEME_TEMPLATES } from '../../constants'
+import { FormatterConfig } from '../../../types'
 import {
   PROPERTIES,
   HEADER,
-} from '../../../common/formatters/__tests__/constants'
-import { DUMMY_ANDROID_THEME } from './constants'
+} from '../../../../common/formatters/__tests__/constants'
+import { DUMMY_ANDROID_THEME_OPTIONS } from './constants'
+import { paletteFormatter } from '../paletteFormatter'
 
 describe('colorFormatter', () => {
   it('can handle dictionary with color tokens', () => {
-    const { colorsTemplate } = TEMPLATES(DUMMY_ANDROID_THEME)
+    const { paletteTemplate } = THEME_TEMPLATES(DUMMY_ANDROID_THEME_OPTIONS)
 
     const colorConfig: FormatterConfig = {
-      template: colorsTemplate.source,
+      template: paletteTemplate.source,
       header: HEADER,
       packageName: 'nl.elements.skeleton',
     }
@@ -23,7 +23,7 @@ describe('colorFormatter', () => {
     const dictionary = createDictionary({ properties: PROPERTIES.colors })
     const formatterArgs = createFormatArgs({ dictionary, platform: {} })
 
-    const formatter = colorFormatter(colorConfig)(formatterArgs)
+    const formatter = paletteFormatter(colorConfig)(formatterArgs)
 
     expect(formatter).toMatchSnapshot()
   })

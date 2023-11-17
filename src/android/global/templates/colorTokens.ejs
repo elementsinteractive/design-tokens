@@ -1,0 +1,11 @@
+<%= header %>
+package <%=packageName %>
+
+import androidx.compose.ui.graphics.Color
+
+interface ColorTokens {
+    <%_ for (const { name, value } of colors) { _%>
+    val <%= name %>: Color
+    
+    <%_ } _%>
+}

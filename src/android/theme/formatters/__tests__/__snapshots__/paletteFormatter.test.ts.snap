@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorFormatter can handle dictionary with color tokens 1`] = `
+"/* Test header */
+package nl.elements.skeleton
+
+import androidx.compose.ui.graphics.Color
+
+val primary = Color(0xffffffff)
+
+val background = Color(0xfff4f4f4)
+
+val primaryVariant = Color(0xff000000)
+
+val secondary = Color(0xffff495b)
+
+"
+`;

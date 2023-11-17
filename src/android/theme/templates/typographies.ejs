@@ -1,14 +1,12 @@
+<%= header %>
 package <%= packageName %>
 
-<%= header %>
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.airbnb.android.showkase.annotation.ShowkaseTypography
 
 <%_ for (const { name, fontSize, fontWeight, letterSpacing } of typographies) { _%>
-@ShowkaseTypography(name = "<%= name %>", group = "material")
 val <%= name %> = TextStyle(
     <%_ if (fontWeight) { _%>
     fontWeight = FontWeight.<%= fontWeight %>,-%>

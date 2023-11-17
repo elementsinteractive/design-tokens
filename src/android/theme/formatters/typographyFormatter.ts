@@ -1,9 +1,9 @@
 import type { Formatter } from 'style-dictionary'
 import { toLower } from 'lodash'
 
-import { FormatterConfig } from '../types'
+import { FormatterConfig } from '../../types'
 
-import { useTemplate } from '../../utils'
+import { useTemplate } from '../../../utils'
 
 export const typographyFormatter: (config: FormatterConfig) => Formatter =
   (config: FormatterConfig) =>

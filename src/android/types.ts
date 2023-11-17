@@ -10,6 +10,8 @@ export type ThemeFileOptions = {
 }
 
 export type AndroidTheme = {
+  name: string
+
   typography: ThemeFileOptions
 
   colors: ThemeFileOptions
@@ -17,6 +19,14 @@ export type AndroidTheme = {
   spacings: ThemeFileOptions
 }
 
-export type AndroidJsonOptions = {
+export type AndroidThemeOptions = {
   theme: AndroidTheme
+
+  basePackageName: string
+}
+
+export type AndroidGlobalOptions = {
+  packageName: string
+
+  destination: string
 }

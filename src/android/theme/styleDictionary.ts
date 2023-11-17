@@ -1,19 +1,19 @@
 import StyleDictionaryPackage from 'style-dictionary'
-import { useTemplate } from '../utils'
-import { TEMPLATES } from './constants'
-import { colorFormatter } from './formatters/colorFormatter'
+
+import { useTemplate } from '../../utils'
+import { AndroidThemeOptions } from '../types'
+
+import { THEME_TEMPLATES } from './constants'
 import { spacingFormatter } from './formatters/spacingFormatter'
 import { typographyFormatter } from './formatters/typographyFormatter'
-import { AndroidJsonOptions } from './types'
+import { paletteFormatter } from './formatters/paletteFormatter'
 
-export const styleDictionaryRegistrations = (options: AndroidJsonOptions) => {
-  const { theme } = options
-
-  const templateInfo = TEMPLATES(theme)
+export const themeSDRegisters = (options: AndroidThemeOptions) => {
+  const templateInfo = THEME_TEMPLATES(options)
 
   const {
     headerTemplate,
-    colorsTemplate,
+    paletteTemplate,
     spacingsTemplate,
     typographyTemplate,
   } = templateInfo
@@ -34,19 +34,22 @@ export const styleDictionaryRegistrations = (options: AndroidJsonOptions) => {
 
   StyleDictionaryPackage.registerFormat({
     name: spacingsTemplate.formatter,
-    formatter: spacingFormatter({
-      template: spacingsTemplate.source,
-      header,
-      packageName: spacingsTemplate.packageName,
-    }),
+    formatter: spacingFormatter(
+      {
+        template: spacingsTemplate.source,
+        header,
+        packageName: spacingsTemplate.packageName,
+      },
+      spacingsTemplate.sharedPackageName,
+    ),
   })
 
   StyleDictionaryPackage.registerFormat({
-    name: colorsTemplate.formatter,
-    formatter: colorFormatter({
-      template: colorsTemplate.source,
+    name: paletteTemplate.formatter,
+    formatter: paletteFormatter({
+      template: paletteTemplate.source,
       header,
-      packageName: colorsTemplate.packageName,
+      packageName: paletteTemplate.packageName,
     }),
   })
 
@@ -62,7 +65,7 @@ export const styleDictionaryRegistrations = (options: AndroidJsonOptions) => {
 
   registerFilter(typographyTemplate.filter, 'typography')
   registerFilter(spacingsTemplate.filter, 'spacing')
-  registerFilter(colorsTemplate.filter, 'color')
+  registerFilter(paletteTemplate.filter, 'color')
 
   StyleDictionaryPackage.registerTransformGroup({
     name: 'tokens-android',

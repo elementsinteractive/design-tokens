@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`android can setup with default config 1`] = `
+exports[`android can setup with global config 1`] = `
 Array [
   "name/ti/camel",
 ]
 `;
 
-exports[`android can setup with default config 2`] = `
+exports[`android can setup with global config 2`] = `
 "/**
  * ⚠️ DO NOT MODIFY ⚠️
  * this file is auto generated using elements-design-tokens
@@ -50,7 +50,7 @@ val lightGray = Color(0xfff4f4f4)
 "
 `;
 
-exports[`android can setup with default config 3`] = `
+exports[`android can setup with global config 3`] = `
 "/**
  * ⚠️ DO NOT MODIFY ⚠️
  * this file is auto generated using elements-design-tokens
@@ -59,7 +59,7 @@ exports[`android can setup with default config 3`] = `
  */
 package org.example.design.base
 
-import org.example.design.base.SpacingTokens
+import .SpacingTokens
 
 object Spacings : SpacingTokens {
   override val xxxs = 4
@@ -73,7 +73,7 @@ object Spacings : SpacingTokens {
 }"
 `;
 
-exports[`android can setup with default config 4`] = `
+exports[`android can setup with global config 4`] = `
 "/**
  * ⚠️ DO NOT MODIFY ⚠️
  * this file is auto generated using elements-design-tokens

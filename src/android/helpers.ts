@@ -1,5 +1,4 @@
 import { fileToJSON } from '../common/helpers'
-import { AndroidJsonOptions } from './types'
 
-export const readJsonFileAsOptions = (configPath: string) =>
-  fileToJSON(configPath) as AndroidJsonOptions
+export const readJsonFileAsOptions = <T>(configPath: string) =>
+  fileToJSON(configPath) as T

@@ -1,24 +1,20 @@
-import StyleDictionaryPackage from 'style-dictionary'
-
 import { AndroidConfig } from '../design.types'
-import { createConfig } from './config'
-import { readJsonFileAsOptions } from './helpers'
-import { styleDictionaryRegistrations } from './styleDictionaryRegistrations'
+import { getThemeSD } from './theme'
 
 export const setup = (androidConfig: AndroidConfig) => {
   console.log('Setting up Android', androidConfig)
 
   const { configPath, input } = androidConfig
 
-  const options = readJsonFileAsOptions(configPath)
+  let StyleDictionary
 
-  console.log('Using options', options)
+  if (androidConfig.type == 'theme') {
+    StyleDictionary = getThemeSD(configPath, input)
+  }
 
-  styleDictionaryRegistrations(options)
-
-  const StyleDictionary = StyleDictionaryPackage.extend(
-    createConfig(input, options),
-  )
+  if (StyleDictionary === undefined) {
+    throw new Error('Could not create StyleDictionary config')
+  }
 
   console.log('Building for platform Android')
 

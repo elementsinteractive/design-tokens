@@ -1,10 +1,14 @@
 import StyleDictionaryPackage from 'style-dictionary'
 import { clearOutput, fileExists, fileToString } from '../../common/helpers'
-import { createConfig } from '../config'
-import { ColorFilename, SpacingFilename, TypeFilename } from '../constants'
+import { createThemeConfig } from '../theme/config'
+import {
+  PaletteFilename,
+  SpacingFilename,
+  TypeFilename,
+} from '../theme/constants'
 import { readJsonFileAsOptions } from '../helpers'
-import { styleDictionaryRegistrations } from '../styleDictionaryRegistrations'
-import { AndroidJsonOptions } from '../types'
+import { AndroidThemeOptions } from '../types'
+import { themeSDRegisters } from '../theme/styleDictionary'
 
 describe('android', () => {
   var config = {
@@ -14,17 +18,17 @@ describe('android', () => {
 
   let StyleDictionaryExtended
 
-  let options: AndroidJsonOptions
+  let options: AndroidThemeOptions
 
   beforeAll(() => {
     const { input, configPath } = config
 
     options = readJsonFileAsOptions(configPath)
 
-    styleDictionaryRegistrations(options)
+    themeSDRegisters(options)
 
     StyleDictionaryExtended = StyleDictionaryPackage.extend(
-      createConfig(input, options),
+      createThemeConfig(input, options),
     )
   })
 
@@ -32,14 +36,14 @@ describe('android', () => {
     clearOutput('src/android/__tests__/__output')
   })
 
-  it('can setup with default config', () => {
+  it('can setup with global config', () => {
     StyleDictionaryExtended.buildPlatform('android')
 
     expect(
       StyleDictionaryExtended.transformGroup['tokens-android'],
     ).toMatchSnapshot()
 
-    const colorFile = `${options.theme.colors.destination}/${ColorFilename}`
+    const colorFile = `${options.theme.colors.destination}/${PaletteFilename}`
     const spacingFile = `${options.theme.spacings.destination}/${SpacingFilename}`
     const typeFile = `${options.theme.typography.destination}/${TypeFilename}`
 

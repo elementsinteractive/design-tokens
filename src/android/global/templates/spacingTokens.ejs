@@ -1,0 +1,8 @@
+<%= header %>
+package <%=packageName %>
+
+interface SpacingTokens {
+    <%_ for (const { name, value } of spacings) { _%>
+    const val <%= name %>: Int
+    <%_ } _%>
+}
