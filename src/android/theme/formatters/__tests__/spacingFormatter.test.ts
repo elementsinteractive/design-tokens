@@ -25,7 +25,7 @@ describe('spacingFormatter', () => {
 
     const formatter = spacingFormatter(
       spacingConfig,
-      DUMMY_ANDROID_THEME_OPTIONS.basePackageName,
+      DUMMY_ANDROID_THEME_OPTIONS.globalPackageName,
     )(formatterArgs)
 
     expect(formatter).toMatchSnapshot()

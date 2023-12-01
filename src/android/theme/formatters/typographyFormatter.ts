@@ -5,8 +5,8 @@ import { FormatterConfig } from '../../types'
 
 import { useTemplate } from '../../../utils'
 
-export const typographyFormatter: (config: FormatterConfig) => Formatter =
-  (config: FormatterConfig) =>
+export const typographyFormatter =
+  (config: FormatterConfig): Formatter =>
   ({ dictionary }) => {
     const { template, header, packageName } = config
 
@@ -18,12 +18,12 @@ export const typographyFormatter: (config: FormatterConfig) => Formatter =
       return mapping[weight] ?? weight
     }
 
-    const tokens = dictionary.tokens
+    const tokens = dictionary.allTokens
 
-    const typographies = Object.keys(tokens).map(token => ({
-      name: toLower(token),
-      ...tokens[token].value,
-      fontWeight: mapFontWeight(tokens[token].value.fontWeight),
+    const typographies = tokens.map(token => ({
+      name: token.name,
+      ...token.value,
+      fontWeight: mapFontWeight(token.value.fontWeight),
     }))
 
     return useTemplate(template)({

@@ -7,6 +7,7 @@ import { THEME_TEMPLATES } from './constants'
 import { spacingFormatter } from './formatters/spacingFormatter'
 import { typographyFormatter } from './formatters/typographyFormatter'
 import { paletteFormatter } from './formatters/paletteFormatter'
+import { colorFormatter } from './formatters/colorFormatter'
 
 export const themeSDRegisters = (options: AndroidThemeOptions) => {
   const templateInfo = THEME_TEMPLATES(options)
@@ -16,6 +17,7 @@ export const themeSDRegisters = (options: AndroidThemeOptions) => {
     paletteTemplate,
     spacingsTemplate,
     typographyTemplate,
+    colorTokensTemplate,
   } = templateInfo
 
   const header = useTemplate(headerTemplate)()
@@ -23,6 +25,19 @@ export const themeSDRegisters = (options: AndroidThemeOptions) => {
   /**
    * Formatters
    */
+  StyleDictionaryPackage.registerFormat({
+    name: colorTokensTemplate.formatter,
+    formatter: colorFormatter(
+      {
+        template: colorTokensTemplate.source,
+        header,
+        packageName: colorTokensTemplate.packageName,
+      },
+      options.globalPackageName,
+      options.theme.name,
+    ),
+  })
+
   StyleDictionaryPackage.registerFormat({
     name: typographyTemplate.formatter,
     formatter: typographyFormatter({

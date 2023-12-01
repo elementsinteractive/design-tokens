@@ -1,0 +1,4 @@
+{
+  "destination": "src/android/__tests__/__output/global",
+  "packageName": "org.example.design.global"
+}

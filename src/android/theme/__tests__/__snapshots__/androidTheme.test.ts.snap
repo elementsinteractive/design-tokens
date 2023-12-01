@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`android can setup with theme specific config 1`] = `
+Array [
+  "name/ti/camel",
+]
+`;
+
+exports[`android can setup with theme specific config 2`] = `
+"/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+package org.example.design.base
+
+import androidx.compose.ui.graphics.Color
+
+val primary = Color(0xffff495b)
+
+val background = Color(0xff000000)
+
+val primaryVariant = Color(0xfff4f4f4)
+
+val secondary = Color(0xffffffff)
+
+val secondaryVariant = Color(0xfff4f4f4)
+
+val surface = Color(0xff000000)
+
+val onPrimary = Color(0xffffffff)
+
+val onSecondary = Color(0xff000000)
+
+val onBackground = Color(0xffffffff)
+
+val onSurface = Color(0xffffffff)
+
+val purple = Color(0xff5048da)
+
+val white = Color(0xffffffff)
+
+val pink = Color(0xffff495b)
+
+val black = Color(0xff000000)
+
+val lightGray = Color(0xfff4f4f4)
+
+"
+`;
+
+exports[`android can setup with theme specific config 3`] = `
+"/**
+ * ⚠️ DO NOT MODIFY ⚠️
+ * this file is auto generated using elements-design-tokens
+ *
+ * See https://github.com/elementsinteractive/design-tokens for more info
+ */
+package org.example.design.theme
+
+import androidx.compose.material.Typography
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+
+val bodyLarge = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 16.sp,
+    letterSpacing = (0.5).sp,
+)
+
+val bodyMedium = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 14.sp,
+    letterSpacing = (0.2).sp,
+)
+
+val bodySmall = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 12.sp,
+    letterSpacing = (0.4).sp,
+)
+
+val displayLarge = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 57.sp,
+    letterSpacing = (-0.2).sp,
+)
+
+val displayMedium = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 45.sp,
+)
+
+val displaySmall = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 36.sp,
+)
+
+val headlineLarge = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 32.sp,
+)
+
+val headlineMedium = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 28.sp,
+)
+
+val headlineSmall = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 24.sp,
+)
+
+val labelLarge = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 14.sp,
+    letterSpacing = (0.1).sp,
+)
+
+val labelMedium = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 12.sp,
+    letterSpacing = (0.5).sp,
+)
+
+val labelSmall = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 11.sp,
+    letterSpacing = (0.5).sp,
+)
+
+val titleLarge = TextStyle(
+    fontWeight = FontWeight.Normal,
+    fontSize = 22.sp,
+)
+
+val titleMedium = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 16.sp,
+    letterSpacing = (0.2).sp,
+)
+
+val titleSmall = TextStyle(
+    fontWeight = FontWeight.Medium,
+    fontSize = 14.sp,
+    letterSpacing = (0.1).sp,
+)
+
+val AppTypography = Typography(
+    bodyLarge = bodyLarge,
+    bodyMedium = bodyMedium,
+    bodySmall = bodySmall,
+    displayLarge = displayLarge,
+    displayMedium = displayMedium,
+    displaySmall = displaySmall,
+    headlineLarge = headlineLarge,
+    headlineMedium = headlineMedium,
+    headlineSmall = headlineSmall,
+    labelLarge = labelLarge,
+    labelMedium = labelMedium,
+    labelSmall = labelSmall,
+    titleLarge = titleLarge,
+    titleMedium = titleMedium,
+    titleSmall = titleSmall,
+)"
+`;

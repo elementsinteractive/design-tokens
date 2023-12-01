@@ -16,13 +16,15 @@ export type AndroidTheme = {
 
   colors: ThemeFileOptions
 
+  palette: ThemeFileOptions
+
   spacings: ThemeFileOptions
 }
 
 export type AndroidThemeOptions = {
   theme: AndroidTheme
 
-  basePackageName: string
+  globalPackageName: string
 }
 
 export type AndroidGlobalOptions = {

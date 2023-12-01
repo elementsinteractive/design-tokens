@@ -1,22 +1,27 @@
 import { AndroidThemeOptions, AndroidTheme } from '../../../types'
 
+const fileOptions = {
+  destination: '',
+  packageName: 'org.example',
+}
+
 export const DUMMY_ANDROID_THEME: AndroidTheme = {
   name: 'light',
   typography: {
-    destination: '',
-    packageName: 'org.example',
+    ...fileOptions,
   },
   spacings: {
-    destination: '',
-    packageName: 'org.example',
+    ...fileOptions,
   },
   colors: {
-    destination: '',
-    packageName: 'org.example',
+    ...fileOptions,
+  },
+  palette: {
+    ...fileOptions,
   },
 }
 
 export const DUMMY_ANDROID_THEME_OPTIONS: AndroidThemeOptions = {
   theme: DUMMY_ANDROID_THEME,
-  basePackageName: 'org.example',
+  globalPackageName: 'org.example',
 }
