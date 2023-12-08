@@ -1,7 +1,9 @@
-import { getSDConfig, registerSD } from '../android/styledictionary'
+import { styleDictionaryRegistrations } from '../android/styleDictionaryRegistrations'
 import { join } from 'path'
 import { AndroidThemeOptions } from '../android/types'
 import { fileToString } from '../common/helpers'
+import { createConfig } from '../android/config'
+import StyleDictionary from 'style-dictionary'
 
 const input = join(__dirname, './tokens.json')
 const options: AndroidThemeOptions = {
@@ -21,9 +23,11 @@ describe('android styledictionary', () => {
   let StyleDictionaryExtended
 
   beforeAll(() => {
-    registerSD(options)
+    styleDictionaryRegistrations(options)
 
-    StyleDictionaryExtended = getSDConfig(input, options)
+    StyleDictionaryExtended = StyleDictionary.extend(
+      createConfig(input, options),
+    )
   })
 
   it('can build platform android', () => {
