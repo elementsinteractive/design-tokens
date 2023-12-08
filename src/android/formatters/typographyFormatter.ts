@@ -4,7 +4,7 @@ import { camelCase } from 'lodash'
 import { useTemplate } from '../../utils'
 
 export const typographyFormatter =
-  (template, header, packageName): Formatter =>
+  (template, header, options): Formatter =>
   ({ dictionary }) => {
     const tokens = dictionary.allTokens
 
@@ -27,11 +27,9 @@ export const typographyFormatter =
       }
     })
 
-    console.log(typographies)
-
     return useTemplate(template)({
       typographies,
       header,
-      packageName,
+      packageName: options.packageName,
     })
   }
