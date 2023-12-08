@@ -1,0 +1,8 @@
+<%= header %>
+package <%=packageName %>
+
+object Spacings : SpacingTokens {
+  <%_ for (const { name, value } of spacings) { _%>
+  override val <%= name %> = <%= value %>
+  <%_ } _%>
+}

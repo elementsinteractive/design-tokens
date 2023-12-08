@@ -22,8 +22,6 @@ yargs(hideBin(process.argv))
           describe: 'Tokens file',
           alias: 'i',
         })
-        .choices('type', ['global', 'theme'])
-        .alias('t', 'type')
         .option('config', {
           type: 'string',
           demandOption: true,
@@ -32,7 +30,6 @@ yargs(hideBin(process.argv))
         }),
     handler: argv => {
       setupAndroid({
-        type: argv.type,
         input: argv.input,
         configPath: argv.config,
       })

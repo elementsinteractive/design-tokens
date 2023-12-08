@@ -1,9 +1,0 @@
-<%= header %>
-package <%=packageName %>
-
-import androidx.compose.ui.graphics.Color
-
-<%_ for (const { name, value } of colors) { _%>
-val <%= name %> = Color(0x<%= value %>)
-
-<%_ } _%>

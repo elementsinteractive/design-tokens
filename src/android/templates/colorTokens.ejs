@@ -1,0 +1,11 @@
+<%= header %>
+package <%=packageName %>.<%=themePackageName %>
+
+import androidx.compose.ui.graphics.Color
+import <%=packageName %>.ColorTokens
+
+object <%=themeName %>Colors : ColorTokens {
+    <%_ for (const { name, value } of colors) { _%>
+    override val <%= name %>: Color = Color(0x<%= value %>)
+    <%_ } _%>
+}

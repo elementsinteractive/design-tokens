@@ -1,7 +1,6 @@
 export const HEADER = '/* Test header */'
 
 export const PROPERTIES = {
-
   // Colors
   colors: {
     primary: {
@@ -61,6 +60,7 @@ export const PROPERTIES = {
         textDecoration: 'none',
         textCase: 'none',
       },
+      name: 'h1',
       type: 'typography',
       description: 'Header',
     },
@@ -75,8 +75,9 @@ export const PROPERTIES = {
         textDecoration: 'none',
         textCase: 'none',
       },
+      name: 'h2',
       type: 'typography',
       description: 'Header',
-    }
+    },
   },
 }

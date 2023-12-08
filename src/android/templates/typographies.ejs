@@ -1,0 +1,29 @@
+<%= header %>
+package <%= packageName %>
+
+import androidx.compose.material3.Typography
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+
+<%_ for (const { name, fontSize, fontWeight, letterSpacing } of typographies) { _%>
+val <%= name %> = TextStyle(
+    <%_ if (fontWeight) { _%>
+    fontWeight = FontWeight.<%= fontWeight %>,-%>
+    <%_ } -%>
+
+    <%_ if (fontSize) { _%>
+    fontSize = <%= fontSize %>.sp,-%>
+    <%_ } -%>
+
+    <%_ if (letterSpacing) { _%>
+    letterSpacing = (<%= letterSpacing %>).sp,%>
+    <%_ } -%>
+)
+
+<%_ } _%>
+val AppTypography = Typography(
+<%_ for (const { name, fontSize, fontWeight } of typographies) { _%>
+    <%= name %> = <%= name %>,
+<%_ } _%>
+)

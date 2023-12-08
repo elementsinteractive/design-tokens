@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorFormatter can format color tokens 1`] = `
+"header
+package nl.elements.designsystem.light
+
+import androidx.compose.ui.graphics.Color
+import nl.elements.designsystem.ColorTokens
+
+object LightColors : ColorTokens {
+    override val primary: Color = Color(0xffffffff)
+    override val background: Color = Color(0xfff4f4f4)
+    override val primaryVariant: Color = Color(0xff000000)
+    override val secondary: Color = Color(0xffff495b)
+}
+"
+`;
+
+exports[`colorFormatter can format color tokens types 1`] = `
+"header
+package [object Object]
+
+import androidx.compose.ui.graphics.Color
+
+interface ColorTokens {
+    val primary: Color
+    
+    val background: Color
+    
+    val primaryVariant: Color
+    
+    val secondary: Color
+    
+}
+"
+`;

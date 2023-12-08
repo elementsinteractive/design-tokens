@@ -1,34 +1,15 @@
-export type FormatterConfig = {
-  template: string
-  header: string
-  packageName: string
-}
-
-export type ThemeFileOptions = {
-  destination: string
-  packageName: string
-}
-
-export type AndroidTheme = {
-  name: string
-
-  typography: ThemeFileOptions
-
-  colors: ThemeFileOptions
-
-  palette: ThemeFileOptions
-
-  spacings: ThemeFileOptions
-}
-
 export type AndroidThemeOptions = {
-  theme: AndroidTheme
+  themeName: string
 
-  globalPackageName: string
-}
-
-export type AndroidGlobalOptions = {
   packageName: string
 
-  destination: string
+  colorTokensDestination: string
+
+  colorTokensTypesDestination: string
+
+  spacingsTokensDestination: string
+
+  spacingsTokensTypesDestination: string
+
+  typographiesDestination: string
 }

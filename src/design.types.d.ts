@@ -1,5 +1,3 @@
-import { AndroidTheme } from './android/types'
-
 export type Platform = 'android'
 
 type BasicConfig = {
@@ -12,8 +10,6 @@ type BasicConfig = {
 /** A config to create Android templates */
 export interface AndroidConfig extends BasicConfig {
   configPath: string
-
-  type: 'global' | 'theme'
 }
 
 /** A config to create iOS templates */

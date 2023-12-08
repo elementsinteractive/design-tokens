@@ -10,7 +10,8 @@
     "strictNullChecks": true,
     "declaration": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "lib": ["es6"],
   "include": ["src/**/**.ts"],

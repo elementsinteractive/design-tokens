@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spacingsFormatter can format spacings tokens 1`] = `
+"header
+package nl.elements.designsystem
+
+object Spacings : SpacingTokens {
+  override val xxxs = 4
+  override val xxs = 8
+  override val xs = 12
+}"
+`;
